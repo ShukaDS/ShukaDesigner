@@ -2,10 +2,8 @@
 import './assets/tailwind.scss'
 </script>
 
-
 <template>
   <div>
-		asd12 1
     <NuxtPage />
   </div>
 </template>

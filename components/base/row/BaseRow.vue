@@ -3,10 +3,9 @@
 	<div :class="classesWrap" :style="stylesWrap">
 
 		<keep-alive>
-			<component :is="currentComponent"></component>
+			<component :is="currentComponent" :content="content"></component>
 		</keep-alive>
 
-		<button @click="create">+</button>
 	</div>
 
 </template>
@@ -28,7 +27,7 @@ export default {
 			type: String,
 			required: false,
 			default: () => {
-				return 'regular'
+				return 'default'
 			}
 		},
 		/*
@@ -39,7 +38,7 @@ export default {
 			type: String,
 			required: false,
 			default: () => {
-				return 'regular'
+				return 'default'
 			}
 		},
 		/*
@@ -50,7 +49,7 @@ export default {
 			type: String,
 			required: false,
 			default: () => {
-				return 'regular'
+				return 'default'
 			}
 		},
 		/*
@@ -61,7 +60,7 @@ export default {
 			type: String,
 			required: false,
 			default: () => {
-				return 'regular'
+				return 'default'
 			}
 		},
 		/*
@@ -79,7 +78,8 @@ export default {
 			let result
 			result = {
 				'w-full': true,
-				'h-24': true
+				'bg-green-300': true,
+
 			}
 			result = self.createMargin(result)
 			result = self.createPadding(result)
@@ -97,17 +97,17 @@ export default {
 			let self = this
 			switch (self.paddingTop) {
 				case 'regular' :
-					result['pt-5'] = true
+					result['pt-72'] = true
 					break
 				case 'large' :
-					result['pt-10'] = true
+					result['pt-144'] = true
 			}
 			switch (self.paddingBottom) {
 				case 'regular' :
-					result['pb-5'] = true
+					result['pb-72'] = true
 					break
 				case 'large' :
-					result['pb-10'] = true
+					result['pb-144'] = true
 			}
 			return result
 		},
@@ -115,26 +115,26 @@ export default {
 			let self = this
 			switch (self.marginTop) {
 				case 'regular' :
-					result['mt-5'] = true
+					result['mt-72'] = true
 					break
 				case 'large' :
-					result['mt-10'] = true
+					result['mt-144'] = true
 			}
 			switch (self.marginBottom) {
 				case 'regular' :
-					result['mb-5'] = true
+					result['mb-72'] = true
 					break
 				case 'large' :
-					result['mb-10'] = true
+					result['mb-144'] = true
 			}
 			return result
 		},
 		createBackground () {
 			let self = this
 			let result
-			if (typeof self.backgroundColor !== 'undefined') {
-				result['backgroundColor'] = self.backgroundColor
-			}
+			//if (typeof self.backgroundColor !== 'undefined') {
+				// result['backgroundColor'] = self.backgroundColor
+			//}
 			return result
 		},
 		create () {

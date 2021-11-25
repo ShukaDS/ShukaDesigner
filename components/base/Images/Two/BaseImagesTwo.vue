@@ -14,19 +14,8 @@
 </template>
 
 <script>
-import useBreakpoints from '../../../useBreakpoints'
-
 export default {
 	layout: false,
-	setup(){
-
-		const { windowWidth, mediaType } = useBreakpoints()
-
-		console.log(windowWidth, mediaType)
-
-		return { windowWidth, mediaType }
-
-	},
 	props: {
 		content: {
 			type: Object,
