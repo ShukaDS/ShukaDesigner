@@ -76,7 +76,7 @@ export default {
 			meta: {},
 			items: [
 				{
-					backgroundColor: 'red',
+					backgroundColor: 'purple',
 					marginTop: 'regular',
 					marginBottom: 'regular',
 					paddingTop: 'regular',

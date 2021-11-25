@@ -1,6 +1,6 @@
 <template>
 
-	<div :class="classesWrap" :style="stylesWrap">
+	<div :class="classesWrap">
 
 		<keep-alive>
 			<component :is="currentComponent" :content="content"></component>
@@ -77,16 +77,14 @@ export default {
 			let self = this
 			let result
 			result = {
-				'w-full': true,
-				'bg-green-300': true,
-
+				'w-full': true
 			}
+
 			result = self.createMargin(result)
 			result = self.createPadding(result)
+			result = self.createBackground(result)
+
 			return result
-		},
-		stylesWrap () {
-			return this.createBackground({})
 		},
 		currentComponent () {
 			return this.content.component
@@ -129,12 +127,11 @@ export default {
 			}
 			return result
 		},
-		createBackground () {
+		createBackground (result) {
 			let self = this
-			let result
-			//if (typeof self.backgroundColor !== 'undefined') {
-				// result['backgroundColor'] = self.backgroundColor
-			//}
+			if (typeof self.backgroundColor !== 'undefined') {
+				result[`bg-${self.backgroundColor}-300`] = true
+			}
 			return result
 		},
 		create () {
