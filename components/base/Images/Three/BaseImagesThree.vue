@@ -1,4 +1,7 @@
 <template>
+
+	{{ mediaType }}
+
 	<div :class="classesWrap">
 
 		<img v-for="(image, key) in content.data.images"
@@ -14,18 +17,14 @@
 </template>
 
 <script>
-import useBreakpoints from '../../../useBreakpoints'
+import useGlobalMedia from '../../../../composables/useGlobalMedia'
 
 export default {
 	layout: false,
-	setup(){
-
-		const { windowWidth, mediaType } = useBreakpoints()
-
-		console.log(windowWidth, mediaType)
+	setup () {
+		const { windowWidth, mediaType } = useGlobalMedia()
 
 		return { windowWidth, mediaType }
-
 	},
 	props: {
 		content: {
@@ -34,56 +33,115 @@ export default {
 		}
 	},
 	computed: {
-		classesWrap(){
-			return {
+		classesWrap () {
+			let self = this
+			let result = {
 				'container': true,
 				'mx-auto': true,
 				'grid': true,
-				'md:grid-cols-12': true,
-				'grid-cols-6': true,
-				'gap-5 ': true,
-				'justify-center': true,
+				'gap-5 ': true
 			}
+			if (self.mediaType === 'xs') {
+				if (typeof self.content.data.mediaTypes !== 'undefined'
+					&& typeof self.content.data.mediaTypes.xs !== 'undefined') {
+				} else {
+					result['grid-cols-6'] = true
+				}
+			}
+			if (self.mediaType === 'sm') {
+				if (typeof self.content.data.mediaTypes !== 'undefined'
+					&& typeof self.content.data.mediaTypes.sm !== 'undefined') {
+				} else {
+					result['grid-cols-12'] = true
+				}
+			}
+			if (self.mediaType === 'md') {
+				if (typeof self.content.data.mediaTypes !== 'undefined'
+					&& typeof self.content.data.mediaTypes.md !== 'undefined') {
+				} else {
+					result['grid-cols-12'] = true
+				}
+			}
+			if (self.mediaType === 'xl') {
+				if (typeof self.content.data.mediaTypes !== 'undefined'
+					&& typeof self.content.data.mediaTypes.xl !== 'undefined') {
+				} else {
+					result['grid-cols-12'] = true
+				}
+			}
+			return result
 		},
-		classesImage (){
+		classesImage () {
 			let self = this
 			let result = {
+				'w-full': true,
 				'col-span-12': true,
 				'sm:col-span-4': true,
 			}
-
-			if(typeof self.content.data.mediaTypes !== 'undefined'){
-
-				if(typeof self.content.data.mediaTypes.xs !== 'undefined' && self.mediaType === 'xs'){
-
-
-
-					switch (self.content.data.mediaTypes.xs){
-						case 'mini-1.3A' :
-							result['col-span-12'] = false
-							result['col-span-4'] = true
-							result['col-start-2'] = true
-							break
+			if (self.mediaType === 'xs') {
+				if (typeof self.content.data.mediaTypes !== 'undefined') {
+					if (typeof self.content.data.mediaTypes.xs !== 'undefined') {
+						switch (self.content.data.mediaTypes.xs) {
+							case 'mini-1.3A' :
+								result['col-span-12'] = false
+								result['col-span-4'] = true
+								result['col-start-2'] = true
+								break
+						}
 					}
-
+				} else {
 				}
-
-				if(typeof self.content.data.mediaTypes.sm !== 'undefined' && self.mediaType === 'sm'){
-
-					switch (self.content.data.mediaTypes.sm){
+			}
+			if (self.mediaType === 'sm') {
+				if (typeof self.content.data.mediaTypes.sm !== 'undefined') {
+					switch (self.content.data.mediaTypes.sm) {
 						case 'mini-1.2A' :
 							result['sm:col-span-12'] = true
 							result['sm:col-span-6'] = true
 							result['sm:col-start-4'] = true
 							break
 					}
-
 				}
-
 			}
-
+			if (self.mediaType === 'md') {
+				if (typeof self.content.data.mediaTypes !== 'undefined') {
+					if (typeof self.content.data.mediaTypes.md !== 'undefined') {
+						switch (self.content.data.mediaTypes.xs) {
+							case 'mini-1.3A' :
+								result['col-span-12'] = false
+								result['col-span-4'] = true
+								result['col-start-2'] = true
+								break
+						}
+					}
+				} else {
+				}
+			}
+			if (self.mediaType === 'xl') {
+				if (typeof self.content.data.mediaTypes.xl !== 'undefined') {
+					if (typeof self.content.data.mediaTypes.xs !== 'undefined') {
+						switch (self.content.data.mediaTypes.xs) {
+							case 'mini-1.3A' :
+								result['col-span-12'] = false
+								result['col-span-4'] = true
+								result['col-start-2'] = true
+								break
+						}
+					}
+					if (typeof self.content.data.mediaTypes.sm !== 'undefined') {
+						switch (self.content.data.mediaTypes.sm) {
+							case 'mini-1.2A' :
+								result['sm:col-span-12'] = true
+								result['sm:col-span-6'] = true
+								result['sm:col-start-4'] = true
+								break
+						}
+					}
+				} else {
+				}
+			}
 			return result
-		},
+		}
 	}
 }
 </script>

@@ -77,7 +77,8 @@ export default {
 			let self = this
 			let result
 			result = {
-				'w-full': true
+				'w-full': true,
+				// 'hover:outline-black	': true
 			}
 
 			result = self.createMargin(result)
@@ -130,13 +131,15 @@ export default {
 		createBackground (result) {
 			let self = this
 			if (typeof self.backgroundColor !== 'undefined') {
-				result[`bg-${self.backgroundColor}-300`] = true
+				// result[`bg-${self.backgroundColor}-300`] = true
+				result[`bg-gray-200`] = true
 			}
 			return result
 		},
 		create () {
 			alert(3)
 		}
-	}
+	},
+
 }
 </script>

@@ -2,18 +2,18 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	mode: "jit",
-	purge: {
-		enabled: true,
-		// content: ['./src/**/*.html'],
-		safelist: [
-			'bg-red-300',
-			'bg-purple-300',
-			'text-center',
-			'hover:opacity-100',
-			// ...
-			'lg:text-right',
-		]
-	},
+	// purge: {
+	// 	enabled: true,
+	// 	// content: ['./src/**/*.html'],
+	// 	safelist: [
+	// 		'bg-red-300',
+	// 		'bg-purple-300',
+	// 		'text-center',
+	// 		'hover:opacity-100',
+	// 		// ...
+	// 		'lg:text-right',
+	// 	]
+	// },
 	content: {
 		files: [
 			"./components/**/*.{vue,js}",

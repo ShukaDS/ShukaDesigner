@@ -1,12 +1,11 @@
 import {defineNuxtConfig} from 'nuxt3'
 
 export default defineNuxtConfig({
-    //dev: true,
+    dev: true,
     //ignoreOptions: {
     //    ignorecase: false
     //},
     buildModules: [
-        // pinia plugin - https://pinia.esm.dev
         ['@pinia/nuxt']
     ],
     build: {
