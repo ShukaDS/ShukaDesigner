@@ -1,0 +1,35 @@
+[
+  {
+    "marginTop": "regular",
+    "marginBottom": "regular",
+    "content": {
+      "component": "base-texts",
+      "data": {
+        "type": "right",
+        "text": "<p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks.</p><p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers</p>"
+      }
+    }
+  },
+  {
+    "marginTop": "regular",
+    "marginBottom": "regular",
+    "content": {
+      "component": "base-texts",
+      "data": {
+        "type": "left",
+        "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
+      }
+    }
+  },
+  {
+    "marginTop": "regular",
+    "marginBottom": "regular",
+    "content": {
+      "component": "base-texts",
+      "data": {
+        "type": "center",
+        "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
+      }
+    }
+  }
+]

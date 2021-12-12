@@ -1,0 +1,60 @@
+[
+  {
+    "marginTop": "regular",
+    "marginBottom": "regular",
+    "content": {
+      "component": "base-images-three",
+      "data": {
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/s-brown1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/s-brown2.jpg",
+            "alt": "Cian"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/s-brown3.jpg",
+            "alt": "Mainpage"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "marginBottom": "large",
+    "content": {
+      "component": "base-images-three",
+      "data": {
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/s-purple1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/s-purple2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "marginBottom": "large",
+    "content": {
+      "component": "base-images-three",
+      "data": {
+        "mediaTypes": {
+          "xs": "mini-1.3A"
+        },
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/s-brown1.jpg",
+            "alt": "Sber"
+          }
+        ]
+      }
+    }
+  }
+]

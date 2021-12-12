@@ -1,30 +1,130 @@
 <template>
-	<div class="mx-auto relative flex flex-col items-center justify-center">
+	<div class="mx-auto relative flex flex-col items-center justify-center pb-60">
 
-		<div class="fixed bottom-2 right-2 z-50 opacity-50 hover:opacity-100">
-			{{ windowWidth }} |
-			{{ mediaType }}
+		<div class="w-full relative grid grid-rows-1 bg-[#e5e5e5] py-10">
+
+			<div class="container">
+
+				<div class="grid grid-flow-col grid-cols-12 gap-5">
+
+					<div class="col-span-6">
+						<h1 class="bg-[#B09773] text-white inline-block px-4 py-2 rounded-lg">{{ page.meta.title }}</h1>
+						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="mediaType">
+							<span class="uppercase">{{ mediaType }}</span> Screen</h2>
+						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="windowWidth">
+							{{ windowWidth }}</h2>
+					</div>
+
+					<div class="grid grid-flow-col gap-5 col-span-6 grid-cols-12">
+						<div class="z-50 relative col-span-6">
+							<Listbox v-model="selectedPage">
+								<div class="relative mt-1">
+									<ListboxButton
+													class="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-purple-300 focus-visible:ring-offset-2 focus-visible:border-purple-500 sm:text-sm">
+										<span class="block truncate">{{ selectedPage.name }}</span>
+										<span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <SelectorIcon class="w-5 h-5 text-gray-400" aria-hidden="true"/>
+          </span>
+									</ListboxButton>
+
+									<transition
+													leave-active-class="transition duration-100 ease-in"
+													leave-from-class="opacity-100"
+													leave-to-class="opacity-0"
+									>
+										<ListboxOptions
+														class="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+										>
+											<ListboxOption
+															v-slot="{ active, selected }"
+															v-for="page in pages"
+															:key="page.key"
+															:value="page"
+															as="template"
+											>
+												<li :class="[
+                  active ? 'text-purple-900 bg-purple-100' : 'text-gray-900',
+                  'cursor-default select-none relative py-2 pl-10 pr-4',
+                ]">
+                <span :class="[
+                    selected ? 'font-medium' : 'font-normal',
+                    'block truncate',
+                  ]"
+								>{{ page.name }}</span>
+													<span v-if="selected"
+																class="absolute inset-y-0 left-0 flex items-center pl-3 text-purple-600">
+                  <CheckIcon class="w-5 h-5" aria-hidden="true"/>
+                </span>
+												</li>
+											</ListboxOption>
+										</ListboxOptions>
+									</transition>
+								</div>
+							</Listbox>
+						</div>
+						<div class="flex justify-end col-span-6 pl-4">
+							<SwitchGroup>
+								<div class="flex items-center">
+									<SwitchLabel class="mr-4">Тех. данные</SwitchLabel>
+									<Switch
+													v-model="enabledTechData"
+													:class='enabledTechData ? "bg-purple-600" : "bg-purple-400"'
+													class="relative inline-flex items-center h-6 transition-colors rounded-full w-11 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+									>
+        <span
+								:class='enabledTechData ? "translate-x-6" : "translate-x-1"'
+								class="inline-block w-4 h-4 transition-transform transform bg-white rounded-full"
+				/>
+									</Switch>
+								</div>
+							</SwitchGroup>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
 		</div>
 
-		<div class="fixed bottom-2 left-2 z-50 opacity-50 hover:opacity-100">
-			one-col: {{ oneColumnWidth.toFixed(2) }}px |
-			cont-w: {{ containerWidth }}px
-		</div>
+		<div v-for="item in page.items" key="items" class="w-full relative grid grid-rows-1">
 
-		<div v-for="item in rows.items" key="items" class="w-full relative grid grid-rows-1">
-
-			<div :class="classesRowMenu">
+			<div :class="classesRowMenu" v-show="enabledTechData">
 
 				<div :class="classesParams" v-if="item.content.data.figma">
-					<a :href="item.content.data.figma.link" target="_blank">{{ item.content.data.figma.name }} - {{ item.content.data.figma.key }}</a>
+
+					<a :href="item.content.data.figma.link" target="_blank"
+						 :title="item.content.data.figma.key"
+						 class="absolute -right-16 top-0 block bg-white rounded-full w-10 h-10">
+
+						<svg class="w-full" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="512" cy="512" r="512" style="fill:#f24e1e"/>
+							<path d="M512 512c0-47.1 38.2-85.3 85.3-85.3s85.3 38.2 85.3 85.3-38.2 85.3-85.3 85.3S512 559.1 512 512zM341.3 682.7c0-47.1 38.2-85.3 85.3-85.3H512v85.3c0 47.1-38.2 85.3-85.3 85.3s-85.4-38.2-85.4-85.3zM512 256v170.7h85.3c47.1 0 85.3-38.2 85.3-85.3S644.5 256 597.3 256H512zm-170.7 85.3c0 47.1 38.2 85.3 85.3 85.3H512V256h-85.3c-47.2 0-85.4 38.2-85.4 85.3zm0 170.7c0 47.1 38.2 85.3 85.3 85.3H512V426.7h-85.3c-47.2 0-85.4 38.2-85.4 85.3z" style="fill:#fff"/>
+						</svg>
+
+					</a>
+
+					<p class="inline-block">
+						{{ item.content.data.figma.name }} - {{ item.content.data.figma.key }}
+					</p>
+
+
 				</div>
+
+				<!--
 				<div :class="classesParams" v-if="item.content.component">{{ item.content.component }}</div>
 				<div :class="classesParams" v-if="item.backgroundColor">bg - {{ item.backgroundColor }}</div>
 				<div :class="classesParams" v-if="item.paddingTop">pt - {{ item.paddingTop }}</div>
 				<div :class="classesParams" v-if="item.paddingBottom">pb - {{ item.paddingBottom }}</div>
 				<div :class="classesParams" v-if="item.marginTop">mt - {{ item.marginTop }}</div>
 				<div :class="classesParams" v-if="item.marginBottom">mb - {{ item.marginBottom }}</div>
-				<div :class="classesParams" v-if="item.content.data.mediaTypes">media - <pre>{{ item.content.data.mediaTypes }}</pre></div>
+				-->
+				<div :class="classesParams" v-if="item.content.data.type">Type: {{ item.content.data.type }}</div>
+				<div :class="classesParams"
+						 v-if="item.content.data.mediaTypes && Object.keys(item.content.data.mediaTypes).length > 0">Media:
+					<pre>{{ item.content.data.mediaTypes }}</pre>
+				</div>
+				<!--
 				<Menu as="div" class="relative inline-block text-left">
 					<div>
 						<MenuButton
@@ -60,7 +160,7 @@
 						</MenuItems>
 					</transition>
 				</Menu>
-
+--->
 			</div>
 
 			<app-row
@@ -74,23 +174,59 @@
 
 		</div>
 
+		<div class="fixed bottom-2 right-2 z-50 opacity-50 hover:opacity-100" v-show="enabledTechData">
+			{{ windowWidth }} |
+			<span class="uppercase">{{ mediaType }}</span>
+		</div>
+
+		<div class="fixed bottom-2 left-2 z-50 opacity-50 hover:opacity-100" v-show="enabledTechData">
+			one-col: {{ oneColumnWidth.toFixed(2) }}px |
+			cont-w: {{ containerWidth }}px
+		</div>
+
 	</div>
 </template>
 
 <script>
 import AppRow from '../components/base/row/BaseRow'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import {
+	Listbox,
+	ListboxButton,
+	ListboxLabel,
+	ListboxOption,
+	ListboxOptions,
+	Menu,
+	MenuButton,
+	MenuItem,
+	MenuItems,
+	Switch,
+	SwitchGroup,
+	SwitchLabel
+} from '@headlessui/vue'
 import {
 	ArchiveIcon,
+	CheckIcon,
 	ChevronDoubleUpIcon,
 	ChevronDownIcon,
 	ChevronUpIcon,
 	DuplicateIcon,
 	PencilIcon,
+	SelectorIcon,
 	TrashIcon,
 	ViewListIcon
 } from '@heroicons/vue/solid'
 import useGlobalMedia from '../composables/useGlobalMedia'
+import jsonTexts from '../assets/pages/texts.json'
+import jsonBaseImagesOne from '../assets/pages/one_images.json'
+import jsonBaseImagesTwo from '../assets/pages/two_images.json'
+import jsonBaseImagesThree from '../assets/pages/three_images.json'
+import jsonBaseMarginalia from '../assets/pages/marginalia.json'
+import jsonBaseMarginaliaPlus from '../assets/pages/marginalia_plus.json'
+import jsonBaseSignatures from '../assets/pages/signatures.json'
+import jsonBaseRowBg from '../assets/pages/row_bg.json'
+import jsonBaseRowMargins from '../assets/pages/row_margins.json'
+import jsonCase1520 from '../assets/pages/case1520.json'
+import { ref } from 'vue'
 
 export default {
 	components: {
@@ -105,14 +241,21 @@ export default {
 		ViewListIcon,
 		PencilIcon,
 		TrashIcon,
-
 		ChevronUpIcon,
 		ChevronDoubleUpIcon,
+		Listbox,
+		ListboxLabel,
+		ListboxButton,
+		ListboxOptions,
+		ListboxOption,
+		CheckIcon,
+		SelectorIcon,
+		Switch, SwitchGroup, SwitchLabel
 	},
 	setup () {
 		const router = useRouter()
 		const { windowWidth, mediaType, containerWidth, oneColumnWidth } = useGlobalMedia()
-		let rows = {
+		let rows2 = {
 			meta: {},
 			items: [
 				/*
@@ -138,72 +281,72 @@ export default {
 
 
 				*/
+				/*
+                {
+                  marginTop: 'regular',
+                  marginBottom: 'regular',
+                  content: {
+                    component: 'base-images-three',
+                    data: {
+                      images: [
+                        {
+                          src: 'https://haton.ru/custom/dis/s-brown1.jpg',
+                          alt: 'Sber'
+                        },
+                        {
+                          src: 'https://haton.ru/custom/dis/s-brown2.jpg',
+                          alt: 'Cian'
+                        },
+                        {
+                          src: 'https://haton.ru/custom/dis/s-brown3.jpg',
+                          alt: 'Mainpage'
+                        }
+                      ]
+                    }
+                  }
+                },
 
-				{
-					marginTop: 'regular',
-					marginBottom: 'regular',
-					content: {
-						component: 'base-images-three',
-						data: {
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/s-brown1.jpg',
-									alt: 'Sber'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/s-brown2.jpg',
-									alt: 'Cian'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/s-brown3.jpg',
-									alt: 'Mainpage'
-								}
-							]
-						}
-					}
-				},
+                {
+                  marginBottom: 'large',
+                  content: {
+                    component: 'base-images-three',
+                    data: {
+                      images: [
+                        {
+                          src: 'https://haton.ru/custom/dis/s-purple1.jpg',
+                          alt: 'Sber'
+                        },
+                        {
+                          src: 'https://haton.ru/custom/dis/s-purple2.jpg',
+                          alt: 'Cian'
+                        }
+                      ]
+                    }
+                  }
+                },
 
-				{
-					marginBottom: 'large',
-					content: {
-						component: 'base-images-three',
-						data: {
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/s-purple1.jpg',
-									alt: 'Sber'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/s-purple2.jpg',
-									alt: 'Cian'
-								}
-							]
-						}
-					}
-				},
-
-				{
-					marginBottom: 'large',
-					content: {
-						component: 'base-images-three',
-						data: {
-							mediaTypes: {
-								xs: 'mini-1.3A'
-							},
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/s-brown1.jpg',
-									alt: 'Sber'
-								}
-							]
-						}
-					}
-				},
-
+                {
+                  marginBottom: 'large',
+                  content: {
+                    component: 'base-images-three',
+                    data: {
+                      mediaTypes: {
+                        xs: 'mini-1.3A'
+                      },
+                      images: [
+                        {
+                          src: 'https://haton.ru/custom/dis/s-brown1.jpg',
+                          alt: 'Sber'
+                        }
+                      ]
+                    }
+                  }
+                },
+        */
 
 				/*
 				2 Изображения
-				 */
+
 
 				{
 					marginBottom: 'regular',
@@ -280,23 +423,95 @@ export default {
 						}
 					}
 				},
-
+*/
 			]
 		}
-		return { rows, windowWidth, mediaType, containerWidth, oneColumnWidth }
+		const pages = [
+			{ key: 'texts', name: 'Тексты' },
+			{ key: 'one_images', name: '1 изображение' },
+			{ key: 'two_images', name: '2 изображения' },
+			{ key: 'three_images', name: '3 изображения' },
+			{ key: 'marginalia', name: 'Маргиналия' },
+			{ key: 'marginalia_plus', name: 'Маргиналия + Блоки' },
+			{ key: 'signatures', name: 'Подписи' },
+			{ key: 'row_bg', name: 'Фоны' },
+			{ key: 'row_margins', name: 'Управление отступами' },
+			{ key: 'case1520', name: 'Кейс 1520' }
+		]
+		const selectedPage = ref(pages[2])
+		const enabledTechData = ref(true)
+		return {
+			enabledTechData,
+			rows2, windowWidth, mediaType, containerWidth, oneColumnWidth,
+			pages,
+			selectedPage
+		}
+	},
+	data () {
+		return {}
 	},
 	computed: {
+		page () {
+			let self = this
+			let page = {
+				meta: {},
+				items: []
+			}
+			if (self.selectedPage.key === 'texts') {
+				page.meta.title = 'Тексты'
+				page.items = jsonTexts
+			}
+			if (self.selectedPage.key === 'one_images') {
+				page.meta.title = '1 изображение'
+				page.items = jsonBaseImagesOne
+			}
+			if (self.selectedPage.key === 'two_images') {
+				page.meta.title = '2 изображения'
+				page.items = jsonBaseImagesTwo
+			}
+			if (self.selectedPage.key === 'three_images') {
+				page.meta.title = '3 изображения'
+				page.items = jsonBaseImagesThree
+			}
+			if (self.selectedPage.key === 'marginalia') {
+				page.meta.title = 'Маргиналия'
+				page.items = jsonBaseMarginalia
+			}
+			if (self.selectedPage.key === 'marginalia_plus') {
+				page.meta.title = 'Маргиналия + Блоки'
+				page.items = jsonBaseMarginaliaPlus
+			}
+			if (self.selectedPage.key === 'signatures') {
+				page.meta.title = 'Подписи'
+				page.items = jsonBaseSignatures
+			}
+			if (self.selectedPage.key === 'row_bg') {
+				page.meta.title = 'Фоны'
+				page.items = jsonBaseRowBg
+			}
+			if (self.selectedPage.key === 'row_margins') {
+				page.meta.title = 'Управление отступами'
+				page.items = jsonBaseRowMargins
+			}
+			if (self.selectedPage.key === 'case1520') {
+				page.meta.title = 'Кейс 1520'
+				page.items = jsonCase1520
+			}
+			return page
+		},
 		classesParams () {
 			return {
-				'text-xs': true,
+				'text-lg': true,
 				'text-white': true,
-				'last:mr-0 m-1': true
+				'last:mr-0 m-1': true,
 			}
 		},
-		classesRowMenu(){
+		classesRowMenu () {
 			return {
-				'p-1 absolute -translate-y-1/2 top-1/2 right-0 w-96 bg-opacity-20 bg-gradient-to-r to-indigo-500 from-purple-500': true,
-				'rounded-l-lg': true,
+				'py-1 px-2 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2': true,
+				'rounded-lg': true,
+				'shadow-2xl': true,
+				'bg-purple-500': true
 			}
 		},
 		classesMenuItemActive(){

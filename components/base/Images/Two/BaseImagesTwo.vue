@@ -1,16 +1,31 @@
 <template>
-	<div :class="classesWrap">
-		<div v-for="(image, key) in content.data.images"
-				 :class="[classesImage]">
-			<img :src="image.src"
-					 :alt="image.alt"
-					 class="w-full">
+	<div :class="classesWrap1">
+		<div v-for="(image, key) in content.data.images" :class="[
+			classesWrap2,
+			{
+				'col-start-2': (content.data.type === '10-col-5.1' && key === 0) ||
+				(content.data.type === '10-col-without-gap-6.1' && key === 0),
+
+				'col-start-3': key === 0 && (
+					(content.data.type === '8-col-7.1') ||
+					(content.data.type === '8-col-without-gap-8.1')
+				)
+
+			}
+		]">
+			<div :class="classesWrap3">
+				<img :src="image.src" :alt="image.alt" class="w-full">
+
+			</div>
 		</div>
+
 
 	</div>
 </template>
 
 <script>
+import useGlobalMedia from '../../../../composables/useGlobalMedia'
+
 export default {
 	layout: false,
 	setup () {
@@ -24,99 +39,366 @@ export default {
 		}
 	},
 	computed: {
-		classesWrap () {
+		classesWrap1 () {
 			let self = this
-			let result = {
-				'grid grid-flow-col': true
+			let r = {}
+			switch (self.mediaType) {
+				case 'xs' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r[''] = true
+							break
+						case 'without-gap-2.1' :
+							r[''] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r[''] = true
+							break
+						case 'without-gap-4.1' :
+							r[''] = true
+							break
+						case '10-col-5.1' :
+							r[''] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r[''] = true
+							break
+						case '8-col-7.1' :
+							r[''] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r[''] = true
+							break
+					}
+					break
+				case 's' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['grid grid-flow-col gap-5'] = true
+							break
+						case 'without-gap-2.1' :
+							r['grid grid-flow-col'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							break
+						case 'without-gap-4.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+						case '10-col-5.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '8-col-7.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+					}
+					break
+				case 'm' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							// если есть медиа настройки то делаем то то
+							// если нет -> r['grid grid-flow-col gap-5'] = true
+							r['grid grid-flow-col gap-5'] = true
+							break
+						case 'without-gap-2.1' :
+							r['grid grid-flow-col'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							break
+						case 'without-gap-4.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+						case '10-col-5.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+						case '8-col-7.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+					}
+					break
+				case 'l' :
+				case 'xl' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							// если есть медиа настройки то делаем то то
+							// если нет -> r['grid grid-flow-col gap-5'] = true
+							r['grid grid-flow-col gap-5'] = true
+							break
+						case 'without-gap-2.1' :
+							r['grid grid-flow-col'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							break
+						case 'without-gap-4.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+						case '10-col-5.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+						case '8-col-7.1' :
+							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['container mx-auto grid grid-cols-12'] = true
+							break
+					}
 			}
-
-			if (typeof self.content.data.type !== 'undefined') {
-
-				switch (self.content.data.type){
-					case 'without-gap-2.1' :
-						break
-
-					case 'with-gap-1.1' :
-						result['gap-5'] = true
-						break
-
-					case 'col-12-with-gap-3.1' :
-						result['gap-5'] = true
-						result['mx-auto'] = true
-						result['container'] = true
-						result['grid-cols-12'] = true
-						break
-
-
-				}
-
-			} else {
-
-			}
-
-			/*
-			if (self.mediaType === 'xs') {
-				if (typeof self.content.data.mediaTypes !== 'undefined'
-					&& typeof self.content.data.mediaTypes.xs !== 'undefined') {
-				} else {
-					result['grid-cols-6'] = true
-				}
-			}
-			if (self.mediaType === 'sm') {
-				if (typeof self.content.data.mediaTypes !== 'undefined'
-					&& typeof self.content.data.mediaTypes.sm !== 'undefined') {
-				} else {
-					result['grid-cols-12'] = true
-				}
-			}
-			if (self.mediaType === 'md') {
-				if (typeof self.content.data.mediaTypes !== 'undefined'
-					&& typeof self.content.data.mediaTypes.md !== 'undefined') {
-				} else {
-					result['grid-cols-12'] = true
-				}
-			}
-			if (self.mediaType === 'xl') {
-				if (typeof self.content.data.mediaTypes !== 'undefined'
-					&& typeof self.content.data.mediaTypes.xl !== 'undefined') {
-				} else {
-					result['grid-cols-12'] = true
-				}
-			}
-			*/
-
-			return result
+			return r
 		},
-		classesImage () {
+		classesWrap2 () {
 			let self = this
-			let result = {
-				// 'w-full': true
+			let r = {}
+			switch (self.mediaType) {
+				case 'xs' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r[''] = true
+							break
+						case 'without-gap-2.1' :
+							r[''] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r[''] = true
+							break
+						case 'without-gap-4.1' :
+							r[''] = true
+							break
+						case '10-col-5.1' :
+							r[''] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r[''] = true
+							break
+						case '8-col-7.1' :
+							r[''] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r[''] = true
+							break
+					}
+					break
+				case 's' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-2.1' :
+							r['w-full'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['col-span-6'] = true
+							break
+						case 'without-gap-4.1' :
+							r['col-span-6'] = true
+							break
+						case '10-col-5.1' :
+							r['col-span-5'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r[''] = true
+							break
+						case '8-col-7.1' :
+							r[''] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r[''] = true
+							break
+					}
+					break
+				case 'm' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-2.1' :
+							r['w-full'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['col-span-6'] = true
+							break
+						case 'without-gap-4.1' :
+							r['col-span-6'] = true
+							break
+						case '10-col-5.1' :
+							r['col-span-5'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['col-span-5'] = true
+							break
+						case '8-col-7.1' :
+							r['col-span-4'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['col-span-4'] = true
+							break
+					}
+					break
+				case 'l' :
+				case 'xl' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-2.1' :
+							r['w-full'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['col-span-6'] = true
+							break
+						case 'without-gap-4.1' :
+							r['col-span-6'] = true
+							break
+						case '10-col-5.1' :
+							r['col-span-5'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['col-span-5'] = true
+							break
+						case '8-col-7.1' :
+							r['col-span-4'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['col-span-4'] = true
+							break
+					}
 			}
-
-			if (typeof self.content.data.type !== 'undefined') {
-
-				switch (self.content.data.type){
-					case 'without-gap-2.1' :
-						break
-
-					case 'with-gap-1.1' :
-
-						break
-
-					case 'col-12-with-gap-3.1' :
-						result['col-span-6'] = true
-						break
-
-
-				}
-
-			} else {
-
+			return r
+		},
+		classesWrap3 () {
+			let self = this
+			let r = {}
+			switch (self.mediaType) {
+				case 'xs' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r[''] = true
+							break
+						case 'without-gap-2.1' :
+							r[''] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r[''] = true
+							break
+						case 'without-gap-4.1' :
+							r[''] = true
+							break
+						case '10-col-5.1' :
+							r[''] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r[''] = true
+							break
+						case '8-col-7.1' :
+							r[''] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r[''] = true
+							break
+					}
+					break
+				case 's' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r[''] = true
+							break
+						case 'without-gap-2.1' :
+							r[''] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r[''] = true
+							break
+						case 'without-gap-4.1' :
+							r[''] = true
+							break
+						case '10-col-5.1' :
+							r[''] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r[''] = true
+							break
+						case '8-col-7.1' :
+							r[''] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r[''] = true
+							break
+					}
+					break
+				case 'm' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-2.1' :
+							r['w-full'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-4.1' :
+							r['w-full'] = true
+							break
+						case '10-col-5.1' :
+							r['w-full'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['w-full'] = true
+							break
+						case '8-col-7.1' :
+							r['w-full'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['w-full'] = true
+							break
+					}
+					break
+				case 'l' :
+				case 'xl' :
+					switch (self.content.data.type) {
+						case 'with-gap-1.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-2.1' :
+							r['w-full'] = true
+							break
+						case 'col-12-with-gap-3.1' :
+							r['w-full'] = true
+							break
+						case 'without-gap-4.1' :
+							r['w-full'] = true
+							break
+						case '10-col-5.1' :
+							r['w-full'] = true
+							break
+						case '10-col-without-gap-6.1' :
+							r['w-full'] = true
+							break
+						case '8-col-7.1' :
+							r['w-full'] = true
+							break
+						case '8-col-without-gap-8.1' :
+							r['w-full'] = true
+							break
+					}
 			}
-
-
-
-			return result
+			return r
 		}
 	}
 }
