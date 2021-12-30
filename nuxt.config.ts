@@ -1,7 +1,6 @@
 import {defineNuxtConfig} from 'nuxt3'
 
 export default defineNuxtConfig({
-    target: 'static',
     dev: true,
     //ignoreOptions: {
     //    ignorecase: false
@@ -21,8 +20,8 @@ export default defineNuxtConfig({
     },
 
     /* options for vite */
-    // ssr: true // enable unstable server-side rendering for development (false by default)
-    // experimentWarning: false // hide experimental warning message (disabled by default for tests)
+    // ssr: false, // enable unstable server-side rendering for development (false by default)
+    // experimentWarning: true, // hide experimental warning message (disabled by default for tests)
 
 
 })
