@@ -219,7 +219,7 @@ import {
 	SelectorIcon,
 	TrashIcon,
 	ViewListIcon
-} from '@heroicons/vue/solid/esm'
+} from '@heroicons/vue/solid/index'
 
 
 import useGlobalMedia from '../composables/useGlobalMedia'
