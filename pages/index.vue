@@ -193,7 +193,7 @@
 </template>
 
 <script>
-import AppRow from '../components/base/row/BaseRow'
+import AppRow from '../components/Base/Row/BaseRow'
 import {
 	Listbox,
 	ListboxButton,
