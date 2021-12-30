@@ -1,17 +1,19 @@
 <template>
-	<div class="mx-auto relative flex flex-col items-center justify-center pb-60">
+	<div class="mx-auto relative flex flex-col items-center justify-center">
+
+		<div class="bg-[#decbe1] bg-[#ffe9c9] bg-[#F5F5F5] bg-[#e0f4ed]"></div>
 
 		<div class="w-full relative grid grid-rows-1 bg-[#e5e5e5] py-10">
 
 			<div class="container">
 
-				<div class="grid grid-flow-col grid-cols-12 gap-5">
+				<div :class="{'grid gap-5':true, 'grid-flow-col grid-cols-12': mediaType !== 'xs', 'grid-cols-1': mediaType === 'xs'}">
 
 					<div class="col-span-6">
 						<h1 class="bg-[#B09773] text-white inline-block px-4 py-2 rounded-lg">{{ page.meta.title }}</h1>
-						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="mediaType">
+						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="mediaType && mediaType !== 'xs'">
 							<span class="uppercase">{{ mediaType }}</span> Screen</h2>
-						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="windowWidth">
+						<h2 class="bg-[#B09773] opacity-60 ml-2 text-white inline-block px-4 py-2 rounded-lg" v-if="windowWidth && mediaType !== 'xs'">
 							{{ windowWidth }}</h2>
 					</div>
 
@@ -65,7 +67,7 @@
 						<div class="flex justify-end col-span-6 pl-4">
 							<SwitchGroup>
 								<div class="flex items-center">
-									<SwitchLabel class="mr-4">Тех. данные</SwitchLabel>
+									<SwitchLabel class="mr-4"  v-if="windowWidth && mediaType !== 'xs'">Тех. данные</SwitchLabel>
 									<Switch
 													v-model="enabledTechData"
 													:class='enabledTechData ? "bg-purple-600" : "bg-purple-400"'
@@ -89,7 +91,7 @@
 
 		<div v-for="item in page.items" key="items" class="w-full relative grid grid-rows-1">
 
-			<div :class="classesRowMenu" v-show="enabledTechData">
+			<div :class="classesRowMenu" v-if="enabledTechData" style="z-index: 999999999999999999999999">
 
 				<div :class="classesParams" v-if="item.content.data.figma">
 
@@ -124,6 +126,7 @@
 						 v-if="item.content.data.mediaTypes && Object.keys(item.content.data.mediaTypes).length > 0">Media:
 					<pre>{{ item.content.data.mediaTypes }}</pre>
 				</div>
+
 				<!--
 				<Menu as="div" class="relative inline-block text-left">
 					<div>
@@ -161,6 +164,7 @@
 					</transition>
 				</Menu>
 --->
+
 			</div>
 
 			<app-row
@@ -180,7 +184,8 @@
 		</div>
 
 		<div class="fixed bottom-2 left-2 z-50 opacity-50 hover:opacity-100" v-show="enabledTechData">
-			one-col: {{ oneColumnWidth.toFixed(2) }}px |
+			<!-- one-col-gap: {{ oneColumnWidth }}px |-->
+			one-col: {{ oneColumnWidthWithoutGap }}px |
 			cont-w: {{ containerWidth }}px
 		</div>
 
@@ -254,178 +259,8 @@ export default {
 	},
 	setup () {
 		const router = useRouter()
-		const { windowWidth, mediaType, containerWidth, oneColumnWidth } = useGlobalMedia()
-		let rows2 = {
-			meta: {},
-			items: [
-				/*
-				{
-					backgroundColor: 'purple',
-					marginTop: 'regular',
-					marginBottom: 'regular',
-					paddingTop: 'regular',
-					paddingBottom: 'regular',
-					content: {
-						// component: 'BaseImagesThree'
-						component: 'base-images-one',
-						data: {
-							image:
-								{
-									src: 'https://shuka.design/works_img/2021/10/1634302768Cian 1000x1000.png',
-									alt: 'Sber'
-								}
-						}
-					}
-				},
+		const { windowWidth, mediaType, containerWidth, oneColumnWidth, oneColumnWidthWithoutGap } = useGlobalMedia()
 
-
-
-				*/
-				/*
-                {
-                  marginTop: 'regular',
-                  marginBottom: 'regular',
-                  content: {
-                    component: 'base-images-three',
-                    data: {
-                      images: [
-                        {
-                          src: 'https://haton.ru/custom/dis/s-brown1.jpg',
-                          alt: 'Sber'
-                        },
-                        {
-                          src: 'https://haton.ru/custom/dis/s-brown2.jpg',
-                          alt: 'Cian'
-                        },
-                        {
-                          src: 'https://haton.ru/custom/dis/s-brown3.jpg',
-                          alt: 'Mainpage'
-                        }
-                      ]
-                    }
-                  }
-                },
-
-                {
-                  marginBottom: 'large',
-                  content: {
-                    component: 'base-images-three',
-                    data: {
-                      images: [
-                        {
-                          src: 'https://haton.ru/custom/dis/s-purple1.jpg',
-                          alt: 'Sber'
-                        },
-                        {
-                          src: 'https://haton.ru/custom/dis/s-purple2.jpg',
-                          alt: 'Cian'
-                        }
-                      ]
-                    }
-                  }
-                },
-
-                {
-                  marginBottom: 'large',
-                  content: {
-                    component: 'base-images-three',
-                    data: {
-                      mediaTypes: {
-                        xs: 'mini-1.3A'
-                      },
-                      images: [
-                        {
-                          src: 'https://haton.ru/custom/dis/s-brown1.jpg',
-                          alt: 'Sber'
-                        }
-                      ]
-                    }
-                  }
-                },
-        */
-
-				/*
-				2 Изображения
-
-
-				{
-					marginBottom: 'regular',
-					content: {
-						component: 'base-images-two',
-						data: {
-							figma:{
-								name: '2 изображения - Во всю ширину',
-								key: '1.1',
-								link: 'https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5150',
-							},
-							types: 'with-gap-1.1',
-							mediaTypes: {},
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/brown_horiz1.jpg',
-									alt: 'Sber'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/brown_horiz2.jpg',
-									alt: 'Cian'
-								}
-							]
-						}
-					}
-				},
-				{
-					marginBottom: 'regular',
-					content: {
-						component: 'base-images-two',
-						data: {
-							figma:{
-								name: '2 изображения - Во всю ширину без отступа',
-								key: '2.1',
-								link: 'https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5179',
-							},
-							type: 'without-gap-2.1',
-							mediaTypes: {},
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/brown_horiz1.jpg',
-									alt: 'Sber'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/brown_horiz2.jpg',
-									alt: 'Cian'
-								}
-							]
-						}
-					}
-				},
-				{
-					marginBottom: 'regular',
-					content: {
-						component: 'base-images-two',
-						data: {
-							figma:{
-								name: '2 изображения - 12 колонок',
-								key: '3.1',
-								link: 'https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5179',
-							},
-							type: 'col-12-with-gap-3.1',
-							mediaTypes: {},
-							images: [
-								{
-									src: 'https://haton.ru/custom/dis/purple_horiz1.jpg',
-									alt: 'Sber'
-								},
-								{
-									src: 'https://haton.ru/custom/dis/purple_horiz2.jpg',
-									alt: 'Cian'
-								}
-							]
-						}
-					}
-				},
-*/
-			]
-		}
 		const pages = [
 			{ key: 'texts', name: 'Тексты' },
 			{ key: 'one_images', name: '1 изображение' },
@@ -433,19 +268,26 @@ export default {
 			{ key: 'three_images', name: '3 изображения' },
 			{ key: 'marginalia', name: 'Маргиналия' },
 			{ key: 'marginalia_plus', name: 'Маргиналия + Блоки' },
-			{ key: 'signatures', name: 'Подписи' },
+			// { key: 'signatures', name: 'Подписи' },
 			{ key: 'row_bg', name: 'Фоны' },
 			{ key: 'row_margins', name: 'Управление отступами' },
 			{ key: 'case1520', name: 'Кейс 1520' }
 		]
-		const selectedPage = ref(pages[2])
-		const enabledTechData = ref(true)
+
+		const selectedPage = ref(pages[0])
+		const enabledTechData = ref(false)
+
 		return {
 			enabledTechData,
-			rows2, windowWidth, mediaType, containerWidth, oneColumnWidth,
+			windowWidth,
+			mediaType,
+			containerWidth,
+			oneColumnWidth,
+			oneColumnWidthWithoutGap,
 			pages,
 			selectedPage
 		}
+
 	},
 	data () {
 		return {}
@@ -515,16 +357,11 @@ export default {
 			}
 		},
 		classesMenuItemActive(){
-
-			let result = {
-				'bg-violet-500 text-white' : 'text-gray-900',
+			return {
+				'bg-violet-500 text-white': 'text-gray-900',
 				'group flex rounded-md items-center w-full px-2 py-2 text-sm': true,
 				'rounded-l-lg': true,
-
 			}
-
-			return result
-
 		}
 	}
 }

@@ -1,7 +1,6 @@
 [
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "paddingTop": "extra-large",
     "content": {
       "component": "base-texts",
       "data": {
@@ -11,8 +10,7 @@
     }
   },
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "paddingTop": "extra-large",
     "content": {
       "component": "base-texts",
       "data": {
@@ -22,8 +20,8 @@
     }
   },
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "paddingTop": "extra-large",
+    "marginBottom": "extra-large",
     "content": {
       "component": "base-texts",
       "data": {

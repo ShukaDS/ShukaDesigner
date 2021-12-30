@@ -1,35 +1,244 @@
 [
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "marginTop": "extra-large",
     "content": {
-      "component": "base-texts",
+      "component": "base-marginalia-six-col-right",
       "data": {
-        "type": "right",
-        "text": "<p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks.</p><p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers</p>"
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10311"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/s-brown1.jpg",
+          "alt": "Sber"
+        }
       }
     }
   },
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "marginTop": "extra-large",
     "content": {
-      "component": "base-texts",
+      "component": "base-marginalia-six-col-left",
       "data": {
-        "type": "left",
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "2 ",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10350"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/s-brown1.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-six-col-full-right",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "3",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=697%3A11394"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/s-purple1.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-six-col-full-left",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "4",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=697%3A11419"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/s-purple1.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-nine-col-full-right",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 9 колонок навылет в разных позициях",
+          "key": "5",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=697%3A11444"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/brown_horiz1.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-nine-col-full-left",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 9 колонок навылет в разных позициях",
+          "key": "6",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=697%3A11469"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/brown_horiz2.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-text-right",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - Текст",
+          "key": "7",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10375"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
         "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
       }
     }
   },
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "marginTop": "extra-large",
+    "marginBottom": "extra-large",
     "content": {
-      "component": "base-texts",
+      "component": "base-marginalia-text-left",
       "data": {
-        "type": "center",
+        "figma": {
+          "name": "Маргиналия + Блок - Текст",
+          "key": "8",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10400"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
         "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
       }
     }
   }
+
+
+
+
+
+
+
 ]

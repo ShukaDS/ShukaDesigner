@@ -1,6 +1,6 @@
 <template>
 	<div :class="classesWrap1">
-		<div :class="classesWrap2">
+		<div :class="classesWrap2" :style="stylesWrap2">
 			<div :class="classesWrap3">
 				<img :src="content.data.image.src" :alt="content.data.image.alt" class="w-full">
 			</div>
@@ -14,8 +14,8 @@ import useGlobalMedia from '../../../../composables/useGlobalMedia'
 export default {
 	layout: false,
 	setup () {
-		const { windowWidth, mediaType } = useGlobalMedia()
-		return { windowWidth, mediaType }
+		const { windowWidth, mediaType, oneColumnWidth, oneColumnWidthWithoutGap } = useGlobalMedia()
+		return { windowWidth, mediaType, oneColumnWidth, oneColumnWidthWithoutGap }
 	},
 	props: {
 		content: {
@@ -38,28 +38,28 @@ export default {
 							r['w-full'] = true
 							break
 						case 'full-container-2.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '10-col-3.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '8-col-4.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-left-5' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-right-6' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-center-7' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-full-left-8' :
-							r['grid grid-cols-2 gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case '6-col-full-right-9' :
-							r['grid grid-cols-2 gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case '9-col-full-left-10.1' :
 							r['flex'] = true
@@ -76,28 +76,28 @@ export default {
 							r['w-full'] = true
 							break
 						case 'full-container-2.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '10-col-3.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '8-col-4.1' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-left-5' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-right-6' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-center-7' :
-							r['container mx-auto grid grid-cols-12 gap-5'] = true
+							r['container mx-auto grid grid-cols-12 gap-v20'] = true
 							break
 						case '6-col-full-left-8' :
-							r['grid grid-cols-2 gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case '6-col-full-right-9' :
-							r['grid grid-cols-2 gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case '9-col-full-left-10.1' :
 							r['flex'] = true
@@ -278,6 +278,45 @@ export default {
 					}
 			}
 			return r
+		},
+		stylesWrap2 () {
+			let self = this
+			let r = {}
+			switch (self.mediaType) {
+				case 'xs' :
+					switch (self.content.data.type) {
+						case '9-col-full-left-10.1' :
+						case '9-col-full-right-11.1' :
+							r['width'] = (self.oneColumnWidthWithoutGap * 6 + 24) + 'px'
+							r['margin-left'] = 24 + 'px'
+							break
+					}
+					break
+				case 's' :
+					switch (self.content.data.type) {
+						case '9-col-full-left-10.1' :
+						case '9-col-full-right-11.1' :
+							r['width'] = (self.oneColumnWidth * 9 + (20 * 8) + 32) + 'px'
+							break
+					}
+					break
+				case 'm' :
+					switch (self.content.data.type) {
+						case '9-col-full-left-10.1' :
+						case '9-col-full-right-11.1' :
+							r['width'] = (self.oneColumnWidth * 9 + (20 * 8) + 48) + 'px'
+							break
+					}
+					break
+				case 'l' :
+				case 'xl' :
+					switch (self.content.data.type) {
+						case '9-col-full-left-10.1' :
+						case '9-col-full-right-11.1' :
+							r['width'] = (self.oneColumnWidth * 9 + (20 * 8) + 80) + 'px'
+							break
+					}
+			}
 		}
 	},
 	methods: {

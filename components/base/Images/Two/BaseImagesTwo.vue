@@ -3,13 +3,19 @@
 		<div v-for="(image, key) in content.data.images" :class="[
 			classesWrap2,
 			{
-				'col-start-2': (content.data.type === '10-col-5.1' && key === 0) ||
-				(content.data.type === '10-col-without-gap-6.1' && key === 0),
+				'col-start-2':
+					(content.data.type === '10-col-5.1' && key === 0 && ['xl', 'l', 'm', 's'].includes(mediaType))
+					|| (content.data.type === '10-col-5.1' && (key === 0 || key === 1)  && ['xs'].includes(mediaType))
+					|| (content.data.type === '10-col-without-gap-6.1' && key === 0 && ['xl', 'l', 'm', 's'].includes(mediaType))
+					|| (content.data.type === '10-col-without-gap-6.1' && (key === 0 || key === 1) && ['xs'].includes(mediaType))
+					|| (content.data.type === '8-col-7.1' && (key === 0 || key === 1) && ['xs'].includes(mediaType))
+					|| (content.data.type === '8-col-without-gap-8.1' && (key === 0 || key === 1) && ['xs'].includes(mediaType))
 
-				'col-start-3': key === 0 && (
-					(content.data.type === '8-col-7.1') ||
-					(content.data.type === '8-col-without-gap-8.1')
-				)
+					,
+
+				'col-start-3':
+						(content.data.type === '8-col-7.1' && key === 0 && ['xl', 'l', 'm', 's'].includes(mediaType))
+					  || (content.data.type === '8-col-without-gap-8.1' && key === 0 && ['xl', 'l', 'm', 's'].includes(mediaType))
 
 			}
 		]">
@@ -46,56 +52,56 @@ export default {
 				case 'xs' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							r[''] = true
+							r['grid grid-flow-row gap-v20'] = true
 							break
 						case 'without-gap-2.1' :
-							r[''] = true
+							r['grid grid-flow-row'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r[''] = true
+							r['container mx-auto grid gap-v20 grid-cols-6'] = true
 							break
 						case 'without-gap-4.1' :
-							r[''] = true
+							r['container mx-auto grid grid-cols-6'] = true
 							break
 						case '10-col-5.1' :
-							r[''] = true
+							r['container mx-auto gap-v20 grid grid-cols-6'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r[''] = true
+							r['container mx-auto grid grid-cols-6'] = true
 							break
 						case '8-col-7.1' :
-							r[''] = true
+							r['container mx-auto gap-v20 grid grid-cols-6'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r[''] = true
+							r['container mx-auto grid grid-cols-6'] = true
 							break
 					}
 					break
 				case 's' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							r['grid grid-flow-col gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case 'without-gap-2.1' :
-							r['grid grid-flow-col'] = true
+							r['grid grid-cols-2'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							r['container mx-auto grid gap-v20 grid-cols-12'] = true
 							break
 						case 'without-gap-4.1' :
 							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '10-col-5.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '8-col-7.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto grid grid-cols-12'] = true
 							break
 					}
 					break
@@ -103,26 +109,26 @@ export default {
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
 							// если есть медиа настройки то делаем то то
-							// если нет -> r['grid grid-flow-col gap-5'] = true
-							r['grid grid-flow-col gap-5'] = true
+							// если нет -> r['grid grid-cols-2 gap-v20'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case 'without-gap-2.1' :
-							r['grid grid-flow-col'] = true
+							r['grid grid-cols-2'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							r['container mx-auto grid gap-v20 grid-cols-12'] = true
 							break
 						case 'without-gap-4.1' :
 							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '10-col-5.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '10-col-without-gap-6.1' :
 							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '8-col-7.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '8-col-without-gap-8.1' :
 							r['container mx-auto grid grid-cols-12'] = true
@@ -133,27 +139,25 @@ export default {
 				case 'xl' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							// если есть медиа настройки то делаем то то
-							// если нет -> r['grid grid-flow-col gap-5'] = true
-							r['grid grid-flow-col gap-5'] = true
+							r['grid grid-cols-2 gap-v20'] = true
 							break
 						case 'without-gap-2.1' :
-							r['grid grid-flow-col'] = true
+							r['grid grid-cols-2'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r['container mx-auto grid gap-5 grid-cols-12'] = true
+							r['container mx-auto grid gap-v20 grid-cols-12'] = true
 							break
 						case 'without-gap-4.1' :
 							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '10-col-5.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '10-col-without-gap-6.1' :
 							r['container mx-auto grid grid-cols-12'] = true
 							break
 						case '8-col-7.1' :
-							r['container mx-auto gap-5 grid grid-cols-12'] = true
+							r['container mx-auto gap-v20 grid grid-cols-12'] = true
 							break
 						case '8-col-without-gap-8.1' :
 							r['container mx-auto grid grid-cols-12'] = true
@@ -169,28 +173,28 @@ export default {
 				case 'xs' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'without-gap-2.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r[''] = true
+							r['col-span-6'] = true
 							break
 						case 'without-gap-4.1' :
-							r[''] = true
+							r['col-span-6'] = true
 							break
 						case '10-col-5.1' :
-							r[''] = true
+							r['col-span-4'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r[''] = true
+							r['col-span-4'] = true
 							break
 						case '8-col-7.1' :
-							r[''] = true
+							r['col-span-4'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r[''] = true
+							r['col-span-4 '] = true
 							break
 					}
 					break
@@ -212,13 +216,13 @@ export default {
 							r['col-span-5'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r[''] = true
+							r['col-span-5'] = true
 							break
 						case '8-col-7.1' :
-							r[''] = true
+							r['col-span-4'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r[''] = true
+							r['col-span-4'] = true
 							break
 					}
 					break
@@ -288,56 +292,56 @@ export default {
 				case 'xs' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'without-gap-2.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'without-gap-4.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '10-col-5.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '8-col-7.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 					}
 					break
 				case 's' :
 					switch (self.content.data.type) {
 						case 'with-gap-1.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'without-gap-2.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'col-12-with-gap-3.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case 'without-gap-4.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '10-col-5.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '10-col-without-gap-6.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '8-col-7.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 						case '8-col-without-gap-8.1' :
-							r[''] = true
+							r['w-full'] = true
 							break
 					}
 					break

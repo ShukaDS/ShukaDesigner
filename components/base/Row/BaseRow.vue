@@ -11,8 +11,15 @@
 </template>
 
 <script>
+import useGlobalMedia from '../../../composables/useGlobalMedia'
+
 export default {
 	layout: false,
+	setup () {
+		const { windowWidth, mediaType } = useGlobalMedia()
+
+		return { windowWidth, mediaType }
+	},
 	props: {
 		content: {
 			type: Object,
@@ -95,49 +102,201 @@ export default {
 		createPadding (result) {
 			let self = this
 			switch (self.paddingTop) {
-				case 'regular' :
-					result['pt-72'] = true
+				case 'small' :
+					result['pt-v20'] = true
+					break
+				case 'medium' :
+					switch (self.mediaType) {
+						case 'xs' :
+						case 's' :
+						case 'm' :
+							result['pt-v32'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pt-v48'] = true
+					}
+
 					break
 				case 'large' :
-					result['pt-144'] = true
+					switch (self.mediaType) {
+						case 'xs' :
+							result['pt-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['pt-v48'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pt-v72'] = true
+					}
+
+					break
+				case 'extra-large' :
+					switch (self.mediaType) {
+						case 'xs' :
+							result['pt-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['pt-v96'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pt-v144'] = true
+					}
 			}
 			switch (self.paddingBottom) {
-				case 'regular' :
-					result['pb-72'] = true
+				case 'small' :
+					result['pb-v20'] = true
+					break
+				case 'medium' :
+					switch (self.mediaType) {
+						case 'xs' :
+						case 's' :
+						case 'm' :
+							result['pb-v32'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pb-v48'] = true
+					}
+
 					break
 				case 'large' :
-					result['pb-144'] = true
+					switch (self.mediaType) {
+						case 'xs' :
+							result['pb-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['pb-v48'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pb-v72'] = true
+					}
+
+					break
+				case 'extra-large' :
+					switch (self.mediaType) {
+						case 'xs' :
+							result['pb-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['pb-v96'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['pb-v144'] = true
+					}
 			}
 			return result
 		},
 		createMargin (result) {
 			let self = this
 			switch (self.marginTop) {
-				case 'regular' :
-					result['mt-72'] = true
+				case 'small' :
+					result['mt-v20'] = true
+					break
+				case 'medium' :
+					switch (self.mediaType) {
+						case 'xs' :
+						case 's' :
+						case 'm' :
+							result['mt-v32'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mt-v48'] = true
+					}
+
 					break
 				case 'large' :
-					result['mt-144'] = true
+					switch (self.mediaType) {
+						case 'xs' :
+							result['mt-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['mt-v48'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mt-v72'] = true
+					}
+
+					break
+				case 'extra-large' :
+					switch (self.mediaType) {
+						case 'xs' :
+							result['mt-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['mt-v96'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mt-v144'] = true
+					}
 			}
 			switch (self.marginBottom) {
-				case 'regular' :
-					result['mb-72'] = true
+				case 'small' :
+					result['mb-v20'] = true
+					break
+				case 'medium' :
+					switch (self.mediaType) {
+						case 'xs' :
+						case 's' :
+						case 'm' :
+							result['mb-v32'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mb-v48'] = true
+					}
+
 					break
 				case 'large' :
-					result['mb-144'] = true
+					switch (self.mediaType) {
+						case 'xs' :
+							result['mb-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['mb-v48'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mb-v72'] = true
+					}
+
+					break
+				case 'extra-large' :
+					switch (self.mediaType) {
+						case 'xs' :
+							result['mb-v64'] = true
+							break
+						case 's' :
+						case 'm' :
+							result['mb-v96'] = true
+							break
+						case 'l' :
+						case 'xl' :
+							result['mb-v144'] = true
+					}
 			}
 			return result
 		},
 		createBackground (result) {
 			let self = this
 			if (typeof self.backgroundColor !== 'undefined') {
-				// result[`bg-${self.backgroundColor}-300`] = true
-				result[`bg-gray-200`] = true
+				result[`bg-[${self.backgroundColor}]`] = true
 			}
 			return result
-		},
-		create () {
-			alert(3)
 		}
 	},
 

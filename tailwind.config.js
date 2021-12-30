@@ -2,6 +2,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	mode: "jit",
+	corePlugins: {
+		container: false
+	},
 	// purge: {
 	// 	enabled: true,
 	// 	// content: ['./src/**/*.html'],
@@ -25,43 +28,33 @@ module.exports = {
 		],
 	},
 	theme: {
+		fontSize: {
+			'base': ['18px', { lineHeight: '26px', }],
+			'l': ['20px', { lineHeight: '28px', }],
+		},
 		extend: {
 			fontFamily: {
 				sans: ['"Gerbera"', ...defaultTheme.fontFamily.sans]
 			},
 			spacing: {
-				'72': '72px',
-				'144': '144px',
+				'v20': '20px',
+				'v32': '32px',
+				'v48': '48px',
+				'v64': '64px',
+				'v72': '72px',
+				'v96': '96px',
+				'v144': '144px',
 			},
-			container: {
-				center: true,
-				padding: {
-					DEFAULT: '1rem',
-					sm: '2rem',
-					lg: '4rem',
-					xl: '5rem',
-					'2xl': '6rem',
-				},
-			},
+			container: false
 		},
 		screens: {
-			'sm': '375px',
-			// => @media (min-width: 640px) { ... }
-
-			'md': '768px',
-			// => @media (min-width: 768px) { ... }
-
-			'lg': '1024px',
-			// => @media (min-width: 1024px) { ... }
-
-			'xl': '1280px',
-			// => @media (min-width: 1280px) { ... }
-
-			'2xl': '1536px',
-			// => @media (min-width: 1536px) { ... }
+			'xs': '0px',
+			's': '767px',
+			'm': '961px',
+			'l': '1280px',
+			'xl': '1921px'
 		}
 	},
-
 	variants: {
 		extend: {},
 	},
@@ -70,5 +63,47 @@ module.exports = {
 		require("@tailwindcss/typography"),
 		require("@tailwindcss/line-clamp"),
 		require("@tailwindcss/aspect-ratio"),
+		function ({ addComponents }) {
+			addComponents({
+				'.container': {
+					maxWidth: '100%',
+					'@screen xs': {
+						paddingLeft: '24px',
+						paddingRight: '24px',
+					},
+					'@screen s': {
+						paddingLeft: '32px',
+						paddingRight: '32px',
+					},
+					'@screen m': {
+						paddingLeft: '48px',
+						paddingRight: '48px',
+					},
+					'@screen l': {
+						paddingLeft: '80px',
+						paddingRight: '80px',
+					},
+					'@screen xl': {
+						maxWidth: '1920px',
+						paddingLeft: '80px',
+						paddingRight: '80px',
+					},
+				}
+			})
+		}
 	],
 };
+
+// 	xs: '24px',
+// 	s: '32px',
+// 	m: '48px',
+// 	l: '80px',
+// 	xl: '80px',
+// },
+
+// screens: {
+// 	'sm': '100%',
+// 	's': '100%',
+// 	'm': 'calc(100% - 96px)',
+// 	'l': '100%',
+// 	'xl': '1921px',

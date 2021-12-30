@@ -1,6 +1,7 @@
 import {defineNuxtConfig} from 'nuxt3'
 
 export default defineNuxtConfig({
+    target: 'static',
     dev: true,
     //ignoreOptions: {
     //    ignorecase: false

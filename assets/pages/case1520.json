@@ -1,34 +1,158 @@
 [
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "content": {
+      "component": "base-case-screen-first",
+      "data": {
+        "figma": {
+          "name": "Обложка кейса",
+          "key": "1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=609%3A5498"
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/1.png",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-one",
+      "data": {
+        "figma": {
+          "name": "1 изображение - 12 колонок",
+          "key": "2.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=595%3A3982"
+        },
+        "type": "full-container-2.1",
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/1.png",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "marginTop": "extra-large",
+    "paddingTop": "large",
+    "paddingBottom": "large",
+    "backgroundColor": "#F5F5F5",
+    "content": {
+      "component": "base-images-one",
+      "data": {
+        "figma": {
+          "name": "1 изображение - 6 колонок слева",
+          "key": "5",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=595%3A3991"
+        },
+        "type": "6-col-left-5",
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/2.png",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "paddingTop": "extra-large",
     "content": {
       "component": "base-texts",
       "data": {
         "type": "right",
-        "text": "<p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks.</p><p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers</p>"
+        "text": "<p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks.</p>"
       }
     }
   },
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "paddingTop": "extra-large",
     "content": {
-      "component": "base-texts",
+      "component": "base-images-three",
       "data": {
-        "type": "left",
-        "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
+        "figma": {
+          "name": "3 изображения - 12 колонок",
+          "key": "1.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=644%3A6878"
+        },
+        "type": "with-gap-1.1",
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/1520/3.png",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/1520/4.png",
+            "alt": "Cian"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/1520/5.png",
+            "alt": "Mainpage"
+          }
+        ]
       }
     }
   },
+
   {
-    "marginTop": "regular",
-    "marginBottom": "regular",
+    "paddingTop": "extra-large",
     "content": {
       "component": "base-texts",
       "data": {
-        "type": "center",
-        "text": "With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks."
+        "type": "right",
+        "text": "<p>With Долями by Tinkoff you can buy goods in online stores by paying in four equal parts. The sneakers, a coffee machine, and the bicycle helmet are yours for a quarter of its price — the three other parts will be charged fee-free during the next six weeks.</p>"
+      }
+    }
+  },
+
+  {
+    "marginTop": "extra-large",
+    "content": {
+      "component": "base-marginalia-six-col-right",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10311"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/1520/7.png",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/6.png",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+
+  {
+    "paddingTop": "extra-large",
+    "marginBottom": "extra-large",
+    "content": {
+      "component": "base-images-one",
+      "data": {
+        "figma": {
+          "name": "1 изображение - 8 колонок",
+          "key": "4.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=595%3A3988"
+        },
+        "type": "8-col-4.1",
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/8.png",
+          "alt": "Sber"
+        }
       }
     }
   }
