@@ -3,7 +3,7 @@ import {defineNuxtConfig} from 'nuxt3'
 export default defineNuxtConfig({
     nitro: {
         preset: 'server',
-        timing: true
+        timing: false
     },
     // dev: true,
     buildModules: [
