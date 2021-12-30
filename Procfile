@@ -1,1 +1,1 @@
-web: node .output/client/index.mjs
+web: node .output/server/index.mjs
