@@ -207,20 +207,20 @@ import {
 	Switch,
 	SwitchGroup,
 	SwitchLabel
-} from '@headlessui/vue'
+} from '../node_modules/@headlessui/vue/dist/index'
 
-//import {
-//	ArchiveIcon,
-//	CheckIcon,
-//	ChevronDoubleUpIcon,
-//	ChevronDownIcon,
-//	ChevronUpIcon,
-//	DuplicateIcon,
-//	PencilIcon,
-//	SelectorIcon,
-//	TrashIcon,
-//	ViewListIcon
-//} from '../node_modules/@heroicons/vue/solid'
+import {
+	ArchiveIcon,
+	CheckIcon,
+	ChevronDoubleUpIcon,
+	ChevronDownIcon,
+	ChevronUpIcon,
+	DuplicateIcon,
+	PencilIcon,
+	SelectorIcon,
+	TrashIcon,
+	ViewListIcon
+} from '../node_modules/@heroicons/vue/solid/index'
 
 import useGlobalMedia from '../composables/useGlobalMedia'
 import jsonTexts from '../assets/pages/texts.json'
@@ -242,21 +242,25 @@ export default {
 		MenuButton,
 		MenuItems,
 		MenuItem,
-		//ChevronDownIcon,
-		//ArchiveIcon,
-		//DuplicateIcon,
-		//ViewListIcon,
-		//PencilIcon,
-		//TrashIcon,
-		//ChevronUpIcon,
-		//ChevronDoubleUpIcon,
+
+
+		ChevronDownIcon,
+		ArchiveIcon,
+		DuplicateIcon,
+		ViewListIcon,
+		PencilIcon,
+		TrashIcon,
+		ChevronUpIcon,
+		ChevronDoubleUpIcon,
+		CheckIcon,
+		SelectorIcon,
+
+
 		Listbox,
 		ListboxLabel,
 		ListboxButton,
 		ListboxOptions,
 		ListboxOption,
-		//CheckIcon,
-		//SelectorIcon,
 		Switch, SwitchGroup, SwitchLabel
 	},
 	setup () {
