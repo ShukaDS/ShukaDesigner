@@ -74,7 +74,7 @@
 <script lang="ts">
 import { ref } from 'vue'
 import { Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { CheckIcon } from '@heroicons/vue/outline'
+import { CheckIcon } from '../node_modules/@heroicons/vue/outline/index'
 
 export default {
     components: {
