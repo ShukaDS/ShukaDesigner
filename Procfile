@@ -1,1 +1,1 @@
-web: node .output/server/index.mjs
+web: npm i && npm run build && npm run start
