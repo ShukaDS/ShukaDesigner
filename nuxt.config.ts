@@ -1,10 +1,11 @@
 import {defineNuxtConfig} from 'nuxt3'
 
 export default defineNuxtConfig({
-    dev: true,
-    //ignoreOptions: {
-    //    ignorecase: false
-    //},
+    nitro: {
+        preset: 'server',
+        timing: true
+    },
+    // dev: true,
     buildModules: [
         ['@pinia/nuxt']
     ],
