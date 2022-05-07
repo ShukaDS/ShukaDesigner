@@ -1,0 +1,199 @@
+[
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - Во всю ширину",
+          "key": "1.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5150"
+        },
+        "type": "with-gap-1.1",
+        "mediaTypes": {},
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - Во всю ширину без отступа",
+          "key": "2.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5179"
+        },
+        "type": "without-gap-2.1",
+        "mediaTypes": {},
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 12 колонок",
+          "key": "3.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5179"
+        },
+        "type": "col-12-with-gap-3.1",
+        "mediaTypes": {},
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 12 колонок без отступа",
+          "key": "4.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5239"
+        },
+        "type": "without-gap-4.1",
+        "mediaTypes": {},
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 10 колонок",
+          "key": "5.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5256"
+        },
+        "type": "10-col-5.1",
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 10 колонок без отступа",
+          "key": "6.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5272"
+        },
+        "type": "10-col-without-gap-6.1",
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/brown_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 8 колонок",
+          "key": "7.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=644%3A6815"
+        },
+        "type": "8-col-7.1",
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/green_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/green_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "paddingTop": "extra-large",
+    "marginBottom": "extra-large",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 8 колонок без отступа",
+          "key": "8.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=644%3A6859"
+        },
+        "type": "8-col-without-gap-8.1",
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/green_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/green_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  }
+]

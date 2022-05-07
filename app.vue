@@ -3,7 +3,7 @@ import './assets/tailwind.scss'
 </script>
 
 <template>
-  <div>
+  <div class="bg-white">
     <NuxtPage />
   </div>
 </template>

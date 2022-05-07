@@ -1,0 +1,84 @@
+[
+
+  {
+    "marginTop": "extra-large",
+    "paddingTop": "large",
+    "paddingBottom": "large",
+    "backgroundColor": "#e0f4ed",
+    "content": {
+      "component": "base-marginalia-six-col-right",
+      "data": {
+        "figma": {
+          "name": "Маргиналия + Блок - 6 колонок в разных позициях",
+          "key": "1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=696%3A10311"
+        },
+        "marginalia": {
+          "text": "Tadanori Yokoo exhibition poster at MoMA, 1972 by Tadanori Yokoo",
+          "images": [
+            {
+              "src": "https://haton.ru/custom/dis/s-brown-mini.jpg",
+              "alt": "Sber"
+            }
+          ]
+        },
+        "image": {
+          "src": "https://haton.ru/custom/dis/s-brown1.jpg",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "marginTop": "extra-large",
+    "paddingTop": "large",
+    "paddingBottom": "large",
+    "backgroundColor": "#decbe1",
+    "content": {
+      "component": "base-images-one",
+      "data": {
+        "figma": {
+          "name": "1 изображение - 8 колонок",
+          "key": "4.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=595%3A3988"
+        },
+        "type": "8-col-4.1",
+        "image": {
+          "src": "https://haton.ru/custom/dis/1520/8.png",
+          "alt": "Sber"
+        }
+      }
+    }
+  },
+
+  {
+    "paddingTop": "large",
+    "paddingBottom": "large",
+    "marginTop": "extra-large",
+    "marginBottom": "extra-large",
+    "backgroundColor": "#ffe9c9",
+    "content": {
+      "component": "base-images-two",
+      "data": {
+        "figma": {
+          "name": "2 изображения - 12 колонок без отступа",
+          "key": "4.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=630%3A5239"
+        },
+        "type": "without-gap-4.1",
+        "mediaTypes": {},
+        "images": [
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz1.jpg",
+            "alt": "Sber"
+          },
+          {
+            "src": "https://haton.ru/custom/dis/purple_horiz2.jpg",
+            "alt": "Cian"
+          }
+        ]
+      }
+    }
+  }
+]

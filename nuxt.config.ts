@@ -1,12 +1,12 @@
 import {defineNuxtConfig} from 'nuxt3'
 
 export default defineNuxtConfig({
-    //dev: true,
-    //ignoreOptions: {
-    //    ignorecase: false
-    //},
+    nitro: {
+        preset: 'server',
+        timing: false
+    },
+    // dev: true,
     buildModules: [
-        // pinia plugin - https://pinia.esm.dev
         ['@pinia/nuxt']
     ],
     build: {
@@ -21,8 +21,8 @@ export default defineNuxtConfig({
     },
 
     /* options for vite */
-    // ssr: true // enable unstable server-side rendering for development (false by default)
-    // experimentWarning: false // hide experimental warning message (disabled by default for tests)
+    // ssr: false, // enable unstable server-side rendering for development (false by default)
+    // experimentWarning: true, // hide experimental warning message (disabled by default for tests)
 
 
 })
