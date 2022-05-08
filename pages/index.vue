@@ -207,7 +207,7 @@ import {
 	Switch,
 	SwitchGroup,
 	SwitchLabel
-} from '../node_modules/@headlessui/vue/dist/index'
+} from '@headlessui/vue'
 
 import {
 	ArchiveIcon,

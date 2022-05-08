@@ -29,7 +29,8 @@
 	<section v-if="mediaType === 'l' || mediaType === 'xl'" class="relative w-full">
 		<div class="w-full relative">
 			<img class="w-full" src="https://haton.ru/custom/dis/1520/main.png">
-			<header class="m-auto left-0 top-0 right-0 absolute font-semibold text-white  leading-none" style="padding-top: 16px; font-size: 52px">
+			<header class="m-auto left-0 top-0 right-0 absolute font-semibold text-white  leading-none"
+							style="padding-top: 16px; font-size: 52px">
 
 				<div class="container w-full">
 

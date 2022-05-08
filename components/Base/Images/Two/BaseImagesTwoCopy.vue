@@ -26,7 +26,7 @@
 				</div>-->
 
 				<div class="w-full">
-				  <img src="https://i.pinimg.com/736x/95/db/85/95db85905c32e5ac384e185cb3f8568d.jpg" class="w-full" alt="">
+					<img src="https://i.pinimg.com/736x/95/db/85/95db85905c32e5ac384e185cb3f8568d.jpg" class="w-full" alt="">
 				</div>
 
 				<!--<div class="relative pb-[100%]">

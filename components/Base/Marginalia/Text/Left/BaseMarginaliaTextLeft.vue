@@ -88,25 +88,16 @@ export default {
 				'grid': true,
 				'gap-v20': true
 			}
-
 			switch (self.mediaType) {
 				case 'xs' :
-
-
 					break
 				case 's' :
-
-
 					break
 				case 'm' :
-
-
 					break
 				case 'l' :
 				case 'xl' :
-
 			}
-
 			return r
 		}
 	},

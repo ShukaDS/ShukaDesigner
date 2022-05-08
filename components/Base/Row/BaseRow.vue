@@ -17,7 +17,6 @@ export default {
 	layout: false,
 	setup () {
 		const { windowWidth, mediaType } = useGlobalMedia()
-
 		return { windowWidth, mediaType }
 	},
 	props: {
@@ -25,7 +24,6 @@ export default {
 			type: Object,
 			required: false
 		},
-
 		/*
 		regular
 		large
@@ -84,14 +82,12 @@ export default {
 			let self = this
 			let result
 			result = {
-				'w-full': true,
+				'w-full': true
 				// 'hover:outline-black	': true
 			}
-
 			result = self.createMargin(result)
 			result = self.createPadding(result)
 			result = self.createBackground(result)
-
 			return result
 		},
 		currentComponent () {
@@ -116,7 +112,6 @@ export default {
 						case 'xl' :
 							result['pt-v48'] = true
 					}
-
 					break
 				case 'large' :
 					switch (self.mediaType) {
@@ -131,7 +126,6 @@ export default {
 						case 'xl' :
 							result['pt-v72'] = true
 					}
-
 					break
 				case 'extra-large' :
 					switch (self.mediaType) {
@@ -162,7 +156,6 @@ export default {
 						case 'xl' :
 							result['pb-v48'] = true
 					}
-
 					break
 				case 'large' :
 					switch (self.mediaType) {
@@ -177,7 +170,6 @@ export default {
 						case 'xl' :
 							result['pb-v72'] = true
 					}
-
 					break
 				case 'extra-large' :
 					switch (self.mediaType) {
@@ -212,7 +204,6 @@ export default {
 						case 'xl' :
 							result['mt-v48'] = true
 					}
-
 					break
 				case 'large' :
 					switch (self.mediaType) {
@@ -227,7 +218,6 @@ export default {
 						case 'xl' :
 							result['mt-v72'] = true
 					}
-
 					break
 				case 'extra-large' :
 					switch (self.mediaType) {
@@ -258,7 +248,6 @@ export default {
 						case 'xl' :
 							result['mb-v48'] = true
 					}
-
 					break
 				case 'large' :
 					switch (self.mediaType) {
@@ -273,7 +262,6 @@ export default {
 						case 'xl' :
 							result['mb-v72'] = true
 					}
-
 					break
 				case 'extra-large' :
 					switch (self.mediaType) {
@@ -298,7 +286,6 @@ export default {
 			}
 			return result
 		}
-	},
-
+	}
 }
 </script>

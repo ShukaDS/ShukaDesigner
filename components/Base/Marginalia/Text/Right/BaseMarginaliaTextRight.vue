@@ -33,7 +33,6 @@ export default {
 		classesWrap1 () {
 			let self = this
 			let r = {}
-
 			switch (self.mediaType) {
 				case 'xs' :
 					r['container mx-auto grid grid-cols-6'] = true
@@ -44,7 +43,6 @@ export default {
 				case 'xl' :
 					r['container mx-auto grid grid-cols-12 gap-v20'] = true
 			}
-
 			return r
 		},
 		classesWrapC () {
@@ -64,29 +62,22 @@ export default {
 		},
 		classesWrapM () {
 			let self = this
-
 			let r = {}
-
 			switch (self.mediaType) {
 				case 'xs' :
 					r['col-span-4 col-start-2 flex flex-col'] = true
-
 					break
 				case 's' :
 					r['col-span-3 col-start-10 flex flex-col'] = true
-
 					break
 				case 'm' :
 				case 'l' :
 				case 'xl' :
 					r['col-span-2 col-start-11 flex flex-col'] = true
 			}
-
-
 			//
 			return r
 		},
-
 		classesText () {
 			let self = this
 			let r = {
@@ -95,25 +86,16 @@ export default {
 				'grid': true,
 				'gap-v20': true
 			}
-
 			switch (self.mediaType) {
 				case 'xs' :
-
-
 					break
 				case 's' :
-
-
 					break
 				case 'm' :
-
-
 					break
 				case 'l' :
 				case 'xl' :
-
 			}
-
 			return r
 		}
 	},

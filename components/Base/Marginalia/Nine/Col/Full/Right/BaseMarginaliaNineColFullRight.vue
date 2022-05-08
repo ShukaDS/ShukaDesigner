@@ -1,16 +1,16 @@
- <template>
+<template>
 
-	 <div :class="classesWrap1">
-		 <div :class="classesWrapC" :style="stylesWrapC">
-			 <img :src="content.data.image.src" :alt="content.data.image.alt" class="w-full">
-		 </div>
-		 <div :class="classesWrapM" :style="stylesWrapM">
-			 <div class="mb-2" v-if="content.data.marginalia.images">
-				 <img class="w-full" :src="content.data.marginalia.images[0].src" alt="">
-			 </div>
-			 <p class="text-gray-500 text-sm" v-if="content.data.marginalia.text" v-html="content.data.marginalia.text"></p>
-		 </div>
-	 </div>
+	<div :class="classesWrap1">
+		<div :class="classesWrapC" :style="stylesWrapC">
+			<img :src="content.data.image.src" :alt="content.data.image.alt" class="w-full">
+		</div>
+		<div :class="classesWrapM" :style="stylesWrapM">
+			<div class="mb-2" v-if="content.data.marginalia.images">
+				<img class="w-full" :src="content.data.marginalia.images[0].src" alt="">
+			</div>
+			<p class="text-gray-500 text-sm" v-if="content.data.marginalia.text" v-html="content.data.marginalia.text"></p>
+		</div>
+	</div>
 
 
 </template>
@@ -34,7 +34,6 @@ export default {
 		classesWrap1 () {
 			let self = this
 			let r = {}
-
 			switch (self.mediaType) {
 				case 'xs' :
 					r['flex justify-between flex-col relative'] = true
@@ -49,7 +48,6 @@ export default {
 				case 'xl' :
 					r['flex justify-between relative'] = true
 			}
-
 			return r
 		},
 		classesWrapC () {
@@ -88,9 +86,7 @@ export default {
 		},
 		classesWrapM () {
 			let self = this
-
 			let r = {}
-
 			switch (self.mediaType) {
 				case 'xs' :
 					r['flex flex-col relative'] = true
@@ -105,17 +101,14 @@ export default {
 				case 'xl' :
 					r['flex flex-col relative'] = true
 			}
-
 			return r
 		},
-		stylesWrapM(){
+		stylesWrapM () {
 			let self = this
-
 			let r = {}
-
 			switch (self.mediaType) {
 				case 'xs' :
-					r['width'] = (self.oneColumnWidth * 4 + (20*3) + 20) + 'px'
+					r['width'] = (self.oneColumnWidth * 4 + (20 * 3) + 20) + 'px'
 					r['left'] = 24 + self.oneColumnWidth + 20 + 'px'
 					break
 				case 's' :
@@ -131,7 +124,6 @@ export default {
 					r['width'] = (self.oneColumnWidth * 2 + 20) + 'px'
 					r['right'] = 80 + 'px'
 			}
-
 			return r
 		}
 	},
