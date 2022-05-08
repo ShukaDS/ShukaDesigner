@@ -1,12 +1,12 @@
 <template>
 
-	<div :class="classesWrap">
+	<section :class="classesWrap">
 
 		<keep-alive>
 			<component :is="currentComponent" :content="content"></component>
 		</keep-alive>
 
-	</div>
+	</section>
 
 </template>
 

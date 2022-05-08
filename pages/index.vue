@@ -220,7 +220,8 @@ import {
 	SelectorIcon,
 	TrashIcon,
 	ViewListIcon
-} from '../node_modules/@heroicons/vue/solid/index'
+} from '@heroicons/vue/solid/index'
+
 
 import useGlobalMedia from '../composables/useGlobalMedia'
 import jsonTexts from '../assets/pages/texts.json'

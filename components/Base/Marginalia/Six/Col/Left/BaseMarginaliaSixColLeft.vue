@@ -3,7 +3,7 @@
 	<div :class="classesWrap1">
 
 		<div :class="classesWrapM">
-			<div class="mb-2" v-if="content.data.marginalia.images">
+      <div class="mb-2" v-if="content.data.marginalia.images">
 				<img class="w-full" :src="content.data.marginalia.images[0].src" alt="">
 			</div>
 			<p class="text-gray-500 text-sm" v-if="content.data.marginalia.text" v-html="content.data.marginalia.text"></p>
