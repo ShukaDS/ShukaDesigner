@@ -23,10 +23,11 @@
         </div>-->
 
 				<div class="relative pb-[100%]">
-					<iframe class="absolute top-0 left-0 w-full h-full"
-									src="https://player.vimeo.com/video/146066786?h=9d352f1bc4&title=0&byline=0"
-									allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen
-									allowfullscreen></iframe>
+<!--					<iframe class="absolute top-0 left-0 w-full h-full"-->
+<!--									src="https://player.vimeo.com/video/146066786?h=9d352f1bc4&title=0&byline=0"-->
+<!--									allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen-->
+<!--									allowfullscreen></iframe>-->
+					<BaseContentDefault></BaseContentDefault>
 				</div>
 
 				<!--<div class="relative pb-[100%]">

@@ -4,13 +4,15 @@
 
 		<div :class="classesWrapM">
 			<div class="mb-2" v-if="content.data.marginalia.images">
-				<img class="w-full" :src="content.data.marginalia.images[0].src" alt="">
+<!--				<img class="w-full" :src="content.data.marginalia.images[0].src" alt="">-->
+				<BaseContentDefault></BaseContentDefault>
 			</div>
 			<p class="text-gray-500 text-sm" v-if="content.data.marginalia.text" v-html="content.data.marginalia.text"></p>
 		</div>
 
 		<div :class="classesWrapC">
-			<img :src="content.data.image.src" :alt="content.data.image.alt" class="w-full">
+<!--			<img :src="content.data.image.src" :alt="content.data.image.alt" class="w-full">-->
+			<BaseContentDefault></BaseContentDefault>
 		</div>
 
 	</div>
