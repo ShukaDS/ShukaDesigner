@@ -224,6 +224,7 @@ import {
 
 
 import useGlobalMedia from '../composables/useGlobalMedia'
+import jsonCaptions from '../assets/pages/captions.json'
 import jsonTexts from '../assets/pages/texts.json'
 import jsonBaseImagesOne from '../assets/pages/one_images.json'
 import jsonBaseImagesTwo from '../assets/pages/two_images.json'
@@ -269,6 +270,7 @@ export default {
 		const { windowWidth, mediaType, containerWidth, oneColumnWidth, oneColumnWidthWithoutGap } = useGlobalMedia()
 
 		const pages = [
+			{ key: 'captions', name: 'Подписи' },
 			{ key: 'texts', name: 'Тексты' },
 			{ key: 'one_images', name: '1 изображение' },
 			{ key: 'two_images', name: '2 изображения' },
@@ -305,6 +307,11 @@ export default {
 			let page = {
 				meta: {},
 				items: []
+			}
+			//
+			if (self.selectedPage.key === 'captions') {
+				page.meta.title = 'Подписи'
+				page.items = jsonCaptions
 			}
 			if (self.selectedPage.key === 'texts') {
 				page.meta.title = 'Тексты'

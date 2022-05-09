@@ -1,0 +1,33 @@
+[
+  {
+    "paddingTop": "extra-large",
+    "content": {
+      "component": "base-subtitles-images-three",
+      "data": {
+        "figma": {
+          "name": "1 изображение - 12 колонок",
+          "key": "2.1",
+          "link": "https://www.figma.com/file/SDAqMglAui4kjwGSuLTKwq/Shuka-%C2%B7-Cases?node-id=595%3A3982"
+        },
+        "type": "full-container-2.1",
+        "items": [
+          {
+            "type": "image",
+            "src": "https://haton.ru/custom/dis/1520/1.png",
+            "alt": "Sber"
+          },
+          {
+            "type": "image",
+            "src": "https://haton.ru/custom/dis/1520/1.png",
+            "alt": "Sber"
+          },
+          {
+            "type": "image",
+            "src": "https://haton.ru/custom/dis/1520/1.png",
+            "alt": "Sber"
+          }
+        ]
+      }
+    }
+  }
+]
