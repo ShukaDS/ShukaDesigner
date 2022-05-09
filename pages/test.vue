@@ -33,6 +33,7 @@ export default {
 		const { data, pending, error, refresh } = useFetch(
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
+		
 		console.log(data)
 
 		for(let i in data.value){
