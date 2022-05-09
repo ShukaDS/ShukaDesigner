@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import { useAsyncData } from 'nuxt/app'
 import AppRow from '../components/Base/Row/BaseRow'
 
 export default {
@@ -32,7 +31,7 @@ export default {
 	async setup () {
 		const items = ref([])
 		const listComponents = await useAsyncData(
-			'mountains',
+			'items',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
 		console.log(listComponents.data.value)
