@@ -34,6 +34,11 @@ export default {
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
 		console.log(data)
+
+		data.forEach((a)=>{
+			console.log(a)
+		})
+
 		// for(let i in data){
 		// 	//Object.assign({}, obj);
 		// 	console.log(data[i], i)
