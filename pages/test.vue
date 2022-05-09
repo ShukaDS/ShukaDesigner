@@ -3,9 +3,7 @@
 
 		<pre>{{ data }}</pre>
 
-		<AppRow
-
-		/>
+		<AppRow/>
 
 <!--		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">-->
 
