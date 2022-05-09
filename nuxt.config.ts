@@ -7,8 +7,7 @@ export default defineNuxtConfig({
     //     timing: false
     // },
     // dev: true,
-
-
+    
     app: {
         head: {
             meta: [
