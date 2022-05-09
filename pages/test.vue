@@ -3,7 +3,7 @@
 
 		<pre>{{ data }}</pre>
 
-		<div v-for="item in data" class="w-full relative grid grid-rows-1">
+		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
 			<app-row
 							:background-color="item.backgroundColor"
@@ -34,7 +34,7 @@ export default {
 		AppRow
 	},
 	async setup () {
-		const { data, pending, error, refresh } = await useAsyncData(
+		const items = await useAsyncData(
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
