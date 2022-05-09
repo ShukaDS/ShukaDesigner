@@ -17,7 +17,7 @@
 
 <script>
 import { useAsyncData } from 'nuxt/app'
-import AppRow from '../components/Base/Row/BaseRow'
+import AppRow from './components/Base/Row/BaseRow'
 
 export default {
 	data () {
