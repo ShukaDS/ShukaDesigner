@@ -29,7 +29,7 @@ export default {
 		AppRow
 	},
 	async setup () {
-		const { items } = await useAsyncData(
+		const items = await useAsyncData(
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
