@@ -1,7 +1,10 @@
 <template>
 	<div>
 
-		<pre>{{ data }}</pre>
+		<pre>{{ items }}</pre>
+
+		
+
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
