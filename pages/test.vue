@@ -4,7 +4,8 @@
 		<pre>{{ items }}</pre>
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
-			<app-row
+
+			<div
 							:background-color="item.backgroundColor"
 							:margin-top="item.marginTop"
 							:margin-bottom="item.marginBottom"
@@ -12,7 +13,8 @@
 							:padding-bottom="item.paddingBottom"
 							:content="item.content"
 
-			/>
+			></div>
+
 		</div>
 
 
