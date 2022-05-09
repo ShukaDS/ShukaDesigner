@@ -3,7 +3,7 @@
 
 		<pre>{{ data }}</pre>
 
-		<AppRow/>
+		<app-row/>
 
 		<!--		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">-->
 
@@ -17,7 +17,7 @@
 
 <script>
 import { useAsyncData } from 'nuxt/app'
-import AppRow from './components/Base/Row/BaseRow'
+import AppRow from '../components/Base/Row/BaseRow'
 
 export default {
 	data () {
