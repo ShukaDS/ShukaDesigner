@@ -30,7 +30,7 @@ export default {
 	},
 	async setup () {
 		const items = ref([])
-		const listComponents = await useAsyncData(
+		const listComponents = await useFetch(
 			'items',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
