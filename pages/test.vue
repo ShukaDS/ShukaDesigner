@@ -18,95 +18,14 @@
 </template>
 
 <script>
-import AppRow from '../components/Base/Row/BaseRow'
-import {
-	Listbox,
-	ListboxButton,
-	ListboxLabel,
-	ListboxOption,
-	ListboxOptions,
-	Menu,
-	MenuButton,
-	MenuItem,
-	MenuItems,
-	Switch,
-	SwitchGroup,
-	SwitchLabel
-} from '@headlessui/vue'
-
-import {
-	ArchiveIcon,
-	CheckIcon,
-	ChevronDoubleUpIcon,
-	ChevronDownIcon,
-	ChevronUpIcon,
-	DuplicateIcon,
-	PencilIcon,
-	SelectorIcon,
-	TrashIcon,
-	ViewListIcon
-} from '@heroicons/vue/solid/index'
-
-import useGlobalMedia from '../composables/useGlobalMedia'
-import jsonTexts from '../assets/pages/texts.json'
-import jsonBaseImagesOne from '../assets/pages/one_images.json'
-import jsonBaseImagesTwo from '../assets/pages/two_images.json'
-import jsonBaseImagesThree from '../assets/pages/three_images.json'
-import jsonBaseMarginalia from '../assets/pages/marginalia.json'
-import jsonBaseMarginaliaPlus from '../assets/pages/marginalia_plus.json'
-import jsonBaseSignatures from '../assets/pages/signatures.json'
-import jsonBaseRowBg from '../assets/pages/row_bg.json'
-import jsonBaseRowMargins from '../assets/pages/row_margins.json'
-import jsonCase1520 from '../assets/pages/case1520.json'
-import { ref } from 'vue'
-
 export default {
-	components: {
-		AppRow,
-		Menu,
-		MenuButton,
-		MenuItems,
-		MenuItem,
-
-
-		ChevronDownIcon,
-		ArchiveIcon,
-		DuplicateIcon,
-		ViewListIcon,
-		PencilIcon,
-		TrashIcon,
-		ChevronUpIcon,
-		ChevronDoubleUpIcon,
-		CheckIcon,
-		SelectorIcon,
-
-
-		Listbox,
-		ListboxLabel,
-		ListboxButton,
-		ListboxOptions,
-		ListboxOption,
-		Switch, SwitchGroup, SwitchLabel
-	},
+	
 	setup () {
-		const router = useRouter()
-		const { windowWidth, mediaType, containerWidth, oneColumnWidth, oneColumnWidthWithoutGap } = useGlobalMedia()
+		const { data, pending, error, refresh } = await useAsyncData(
+			'mountains',
+			() => $fetch('https://api.nuxtjs.dev/mountains')
+		)
 
-		const pages = [
-			{ key: 'texts', name: 'Тексты' },
-			{ key: 'one_images', name: '1 изображение' },
-			{ key: 'two_images', name: '2 изображения' },
-			{ key: 'three_images', name: '3 изображения' },
-			{ key: 'marginalia', name: 'Маргиналия' },
-			{ key: 'marginalia_plus', name: 'Маргиналия + Блоки' },
-			// { key: 'signatures', name: 'Подписи' },
-			{ key: 'row_bg', name: 'Фоны' },
-			{ key: 'row_margins', name: 'Управление отступами' },
-			{ key: 'case1520', name: 'Кейс 1520' }
-		]
-
-		const selectedPage = ref(pages[0])
-		const enabledTechData = ref(false)
 
 		return {
 			enabledTechData,
