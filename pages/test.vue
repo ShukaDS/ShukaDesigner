@@ -3,11 +3,15 @@
 
 		<pre>{{ data }}</pre>
 
-		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">
+		<AppRow
 
-				{{ item }}
+		/>
 
-		</div>
+<!--		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">-->
+
+<!--				{{ item }}-->
+
+<!--		</div>-->
 
 
 	</div>
