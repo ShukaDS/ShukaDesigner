@@ -35,11 +35,11 @@ export default {
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
-		console.log(listComponents.data)
-		for(let i in listComponents.data){
+		console.log(listComponents.data.value)
+		for(let i in listComponents.data.value){
 			//Object.assign({}, obj);
-			console.log(listComponents.data[i], i)
-			items.value.push(Object.assign({backgroundColor: '#000000'}, listComponents.data[i]))
+			console.log(listComponents.data.value[i], i)
+			items.value.push(Object.assign({backgroundColor: '#000000'}, listComponents.data.value[i]))
 		}
 
 		return {
