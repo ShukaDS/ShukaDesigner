@@ -40,9 +40,9 @@ export default defineNuxtConfig({
         dirs: ['~/components']
     },
 
-    build: {
-        transpile: ['@heroicons/vue']
-    },
+    // build: {
+    //     transpile: ['@heroicons/vue']
+    // },
     // build: {
     //     postcss: {
     //         postcssOptions: {
