@@ -3,6 +3,20 @@
 
 		<pre>{{ data }}</pre>
 
+		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">
+
+			<app-row
+							:background-color="item.backgroundColor"
+							:margin-top="item.marginTop"
+							:margin-bottom="item.marginBottom"
+							:padding-top="item.paddingTop"
+							:padding-bottom="item.paddingBottom"
+							:content="item.content"
+			/>
+
+		</div>
+
+
 	</div>
 </template>
 
