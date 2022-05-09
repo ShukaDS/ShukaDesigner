@@ -3,9 +3,6 @@
 
 		<pre>{{ items }}</pre>
 
-
-
-
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
 			<app-row
@@ -28,11 +25,6 @@ import { useAsyncData } from 'nuxt/app'
 import AppRow from '../components/Base/Row/BaseRow'
 
 export default {
-	data () {
-		return {
-			show: false
-		}
-	},
 	components: {
 		AppRow
 	},
