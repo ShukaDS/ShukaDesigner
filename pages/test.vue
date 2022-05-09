@@ -33,7 +33,7 @@ export default {
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
-
+		console.log(items)
 		return {
 			items
 		}
