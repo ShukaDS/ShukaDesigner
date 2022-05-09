@@ -3,7 +3,7 @@
 
 		<pre>{{ items }}</pre>
 
-		
+
 
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
@@ -41,6 +41,10 @@ export default {
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
+
+		return {
+			items
+		}
 	}
 }
 </script>
