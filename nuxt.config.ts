@@ -2,10 +2,12 @@ import {defineNuxtConfig} from 'nuxt'
 
 export default defineNuxtConfig({
     ssr: true,
+
     // nitro: {
     //     preset: 'server',
     //     timing: false
     // },
+
     // dev: true,
 
     app: {
