@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<pre>{{ items }}</pre>
+<!--		<pre>{{ items }}</pre>-->
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
