@@ -22,7 +22,7 @@ git pull https://NaassonTeam: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@github.com
 yarn build
 
 git pull https://NaassonTeam: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@github.com/NaassonTeam/ShukaDesigner && yarn build && pm2 start npm -- start --watch
-git pull https://NaassonTeam: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@github.com/NaassonTeam/ShukaDesigner && pm2 kill && pm2 start npm -- start --watch
+git pull https://NaassonTeam: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@github.com/NaassonTeam/ShukaDesigner && yarn build && pm2 kill && pm2 start npm -- start
 
 
 pm2 start npm -- start --watch
