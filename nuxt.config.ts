@@ -1,6 +1,11 @@
 import {defineNuxtConfig} from 'nuxt'
 
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
+
+
+if(process.env.NODE_ENV === ''){
+
+}
 
 export default defineNuxtConfig({
     ssr: true,
