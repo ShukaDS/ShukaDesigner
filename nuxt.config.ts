@@ -32,10 +32,9 @@ export default defineNuxtConfig({
         }
     },
 
-
-    // buildModules: [
-    //     ['@pinia/nuxt']
-    // ],
+    buildModules: [
+        ['@pinia/nuxt']
+    ],
 
     components: {
         global: true,
@@ -45,16 +44,6 @@ export default defineNuxtConfig({
     // build: {
     //     transpile: ['@heroicons/vue']
     // },
-    // build: {
-    //     postcss: {
-    //         postcssOptions: {
-    //             plugins: {
-    //                 tailwindcss: {},
-    //                 autoprefixer: {},
-    //             }
-    //         }
-    //     },
-    // },
 
     postcss: {
         plugins: {
@@ -62,10 +51,5 @@ export default defineNuxtConfig({
             autoprefixer: {},
         }
     }
-
-    /* options for vite */
-    // ssr: false, // enable unstable server-side rendering for development (false by default)
-    // experimentWarning: true, // hide experimental warning message (disabled by default for tests)
-
 
 })
