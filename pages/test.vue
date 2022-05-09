@@ -35,15 +35,11 @@ export default {
 		)
 		console.log(data)
 
-		data.forEach((a)=>{
-			console.log(a)
-		})
-
-		// for(let i in data){
-		// 	//Object.assign({}, obj);
-		// 	console.log(data[i], i)
-		// 	items.value.push(Object.assign({backgroundColor: '#ffffff'}, data[i]))
-		// }
+		for(let i in data.value){
+			//Object.assign({}, obj);
+			console.log(data.value[i], i)
+			items.value.push(Object.assign({backgroundColor: '#ffffff'}, data.value[i]))
+		}
 
 		return {
 			items
