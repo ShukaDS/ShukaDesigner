@@ -30,10 +30,12 @@ export default {
 	},
 	setup () {
 		const items = ref([])
+
 		const { data, pending, error, refresh } = useFetch(
-			() => $fetch('https://haton.ru/custom/t1/captions.json')
+			'https://haton.ru/custom/t1/captions.json'
+
 		)
-		
+
 		console.log(data)
 
 		for(let i in data.value){
