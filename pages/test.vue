@@ -38,7 +38,7 @@ export default {
 
 		for(let i in listComponents.data){
 			//Object.assign({}, obj);
-			items.value[] = Object.assign({backgroundColor: '#000000'}, listComponents.data[i])
+			items.value.push(Object.assign({backgroundColor: '#000000'}, listComponents.data[i]))
 		}
 
 		return {
