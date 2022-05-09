@@ -12,7 +12,6 @@
 				</div>
 			</div>
 		</template>
-
 	</div>
 	<div class="container mx-auto grid grid-cols-12 gap-x-5" v-if="mediaType==='s'">
 		<template>
@@ -72,7 +71,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -81,7 +80,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -90,7 +89,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -102,7 +101,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 mt-2 mb-5">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 		<div class="col-span-4 col-start-4">
 			<div class="w-full">
@@ -111,7 +110,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 mt-2 mb-5">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 		<div class="col-span-4 col-start-4">
 			<div class="w-full">
@@ -120,7 +119,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 mt-2">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 	</div>
 	<!--7F-->
@@ -131,7 +130,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -140,7 +139,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -149,7 +148,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -161,7 +160,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 text-center mt-2 mb-5">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 		<div class="col-span-4 col-start-4">
 			<div class="w-full">
@@ -170,7 +169,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 text-center mt-2 mb-5">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 		<div class="col-span-4 col-start-4">
 			<div class="w-full">
@@ -179,7 +178,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 text-center mt-2">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 	</div>
 	<!--7G-->
@@ -200,7 +199,7 @@
 		</div>
 		<div class="grid grid-cols-6 gap-x-5 mt-2">
 			<div class="col-span-4 text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -224,7 +223,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 mt-2">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 	</div>
 	<!--7H-->
@@ -245,7 +244,7 @@
 		</div>
 		<div class="grid grid-cols-6 gap-x-5 mt-2">
 			<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -269,7 +268,7 @@
 			</div>
 		</div>
 		<div class="col-span-4 col-start-4 text-sm text-gray-500 text-center mt-2">
-			Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<BaseContentCaption></BaseContentCaption>
 		</div>
 	</div>
 	<!--7I-->
@@ -282,7 +281,7 @@
 		</div>
 		<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 mb-5">
 			<div class="col-span-4 col-start-2 text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="col-span-4 col-start-2">
@@ -305,7 +304,7 @@
 		</div>
 		<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 ">
 			<div class="col-span-4 col-start-2 text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -319,7 +318,7 @@
 		</div>
 		<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 mb-5">
 			<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="col-span-4 col-start-2">
@@ -342,7 +341,7 @@
 		</div>
 		<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 ">
 			<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -368,13 +367,13 @@
 		</div>
 		<div class="col-span-12  container mx-auto grid grid-cols-12 gap-x-5">
 			<div class="col-span-4 text-sm text-gray-500 mt-2">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 			<div class="col-span-4 text-sm text-gray-500 mt-2">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 			<div class="col-span-4 text-sm text-gray-500 mt-2">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -400,7 +399,7 @@
 		</div>
 		<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 ">
 			<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -425,13 +424,13 @@
 		</div>
 		<div class="col-span-12  container mx-auto grid grid-cols-12 gap-x-5">
 			<div class="col-span-4 text-sm text-gray-500 mt-2 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 			<div class="col-span-4 text-sm text-gray-500 mt-2">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 			<div class="col-span-4 text-sm text-gray-500 mt-2">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -443,7 +442,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -452,7 +451,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -461,7 +460,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -486,7 +485,7 @@
 		</div>
 		<div class="col-span-12  container mx-auto grid grid-cols-12 gap-x-5">
 			<div class="col-span-4 col-start-5 text-sm text-gray-500 mt-2 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -498,7 +497,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -507,7 +506,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
@@ -516,7 +515,7 @@
 					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
 			</div>
 			<div class="col-span-4 col-start-2 text-center text-sm mt-2 text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -541,7 +540,7 @@
 		</div>
 		<div class="col-span-12  container mx-auto grid grid-cols-12 gap-x-5">
 			<div class="col-span-4 col-start-5 text-sm text-gray-500 mt-2 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -563,7 +562,7 @@
 		</div>
 		<div class="grid grid-cols-6 gap-x-5 mt-2">
 			<div class="col-span-4 col-start-2 text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
@@ -585,7 +584,7 @@
 		</div>
 		<div class="grid grid-cols-6 gap-x-5 mt-2">
 			<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>

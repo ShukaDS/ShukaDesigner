@@ -47,7 +47,6 @@ import {
 	ViewListIcon
 } from '@heroicons/vue/solid/index'
 
-
 import useGlobalMedia from '../composables/useGlobalMedia'
 import jsonTexts from '../assets/pages/texts.json'
 import jsonBaseImagesOne from '../assets/pages/one_images.json'
