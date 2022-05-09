@@ -16,12 +16,19 @@
 </template>
 
 <script>
+import { useAsyncData } from 'nuxt/app'
 
-
-
-const { data, pending, error, refresh } = await useAsyncData(
-	'mountains',
-	() => $fetch('https://haton.ru/custom/t1/captions.json')
-)
-
+export default {
+	data() {
+		return {
+			show: false
+		}
+	},
+	async setup () {
+		const { data, pending, error, refresh } = await useAsyncData(
+			'mountains',
+			() => $fetch('https://haton.ru/custom/t1/captions.json')
+		)
+	}
+}
 </script>
