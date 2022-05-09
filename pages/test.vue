@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<pre>{{ data[0].title }}</pre>
+		<pre>{{ data[0] }}</pre>
 
 	</div>
 </template>
@@ -9,7 +9,7 @@
 <script setup>
 const { data, pending, error, refresh } = await useAsyncData(
 	'mountains',
-	() => $fetch('https://api.nuxtjs.dev/mountains')
+	() => $fetch('https://haton.ru/custom/t1/captions.json')
 )
 
 </script>
