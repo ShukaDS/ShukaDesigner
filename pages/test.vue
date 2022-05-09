@@ -30,16 +30,16 @@ export default {
 	},
 	setup () {
 		const items = ref([])
-		const { data, pending, error, refresh } = await useFetch(
+		const { data, pending, error, refresh } = useFetch(
 			'items',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
 		console.log(data)
-		for(let i in data){
-			//Object.assign({}, obj);
-			console.log(data[i], i)
-			items.value.push(Object.assign({backgroundColor: '#ffffff'}, data[i]))
-		}
+		// for(let i in data){
+		// 	//Object.assign({}, obj);
+		// 	console.log(data[i], i)
+		// 	items.value.push(Object.assign({backgroundColor: '#ffffff'}, data[i]))
+		// }
 
 		return {
 			items
