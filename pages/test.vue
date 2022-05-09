@@ -5,7 +5,7 @@
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
-			<div
+			<app-row
 							:background-color="item.backgroundColor"
 							:margin-top="item.marginTop"
 							:margin-bottom="item.marginBottom"
@@ -13,7 +13,7 @@
 							:padding-bottom="item.paddingBottom"
 							:content="item.content"
 
-			></div>
+			></app-row>
 
 		</div>
 
@@ -39,7 +39,7 @@ export default {
 		for(let i in listComponents.data.value){
 			//Object.assign({}, obj);
 			console.log(listComponents.data.value[i], i)
-			items.value.push(Object.assign({backgroundColor: '#000000'}, listComponents.data.value[i]))
+			items.value.push(Object.assign({backgroundColor: '#ffffff'}, listComponents.data.value[i]))
 		}
 
 		return {
