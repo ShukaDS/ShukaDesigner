@@ -36,9 +36,13 @@ export default {
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
 
+		for(let i in listComponents.data){
+			//Object.assign({}, obj);
+			items.value[] = Object.assign({}, listComponents.data[i])
 
 
-		items.value = listComponents.data
+		}
+
 		return {
 			items
 		}
