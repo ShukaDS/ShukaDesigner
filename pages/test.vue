@@ -28,7 +28,7 @@ export default {
 	components: {
 		AppRow
 	},
-	async setup () {
+	setup () {
 		const items = ref([])
 		const { data, pending, error, refresh } = await useFetch(
 			'items',
