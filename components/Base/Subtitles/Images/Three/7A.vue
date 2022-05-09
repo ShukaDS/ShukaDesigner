@@ -12,7 +12,6 @@
 				</div>
 			</div>
 		</template>
-
 	</div>
 	<div class="container mx-auto grid grid-cols-12 gap-x-5" v-if="mediaType==='s'">
 		<template>
