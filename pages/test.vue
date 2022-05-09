@@ -35,7 +35,7 @@ export default {
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
-
+		console.log(listComponents.data)
 		for(let i in listComponents.data){
 			//Object.assign({}, obj);
 			console.log(listComponents.data[i], i)
