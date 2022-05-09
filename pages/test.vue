@@ -5,7 +5,7 @@
 
 		<div v-for="item in data" key="items" class="w-full relative grid grid-rows-1">
 
-			<app-row
+			<AppRow
 							:background-color="item.backgroundColor"
 							:margin-top="item.marginTop"
 							:margin-bottom="item.marginBottom"
