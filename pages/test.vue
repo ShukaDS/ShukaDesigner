@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<pre>{{ data }}</pre>
+		<pre>{{ data[0] }}</pre>
 
 	</div>
 </template>
