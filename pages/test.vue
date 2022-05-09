@@ -30,14 +30,14 @@ export default {
 	},
 	async setup () {
 		const items = ref([])
-		const listComponents = await useFetch(
+		const { data, pending, error, refresh } = await useFetch(
 			'items',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
-		console.log(listComponents.data.value)
-		for(let i in listComponents.data.value){
+		console.log(data)
+		for(let i in data){
 			//Object.assign({}, obj);
-			console.log(listComponents.data.value[i], i)
+			console.log(data[i], i)
 			items.value.push(Object.assign({backgroundColor: '#ffffff'}, listComponents.data.value[i]))
 		}
 
