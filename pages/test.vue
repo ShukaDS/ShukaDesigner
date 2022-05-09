@@ -5,15 +5,15 @@
 
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
-<!--			<app-row-->
-<!--							:background-color="item.backgroundColor"-->
-<!--							:margin-top="item.marginTop"-->
-<!--							:margin-bottom="item.marginBottom"-->
-<!--							:padding-top="item.paddingTop"-->
-<!--							:padding-bottom="item.paddingBottom"-->
-<!--							:content="item.content"-->
+			<!--			<app-row-->
+			<!--							:background-color="item.backgroundColor"-->
+			<!--							:margin-top="item.marginTop"-->
+			<!--							:margin-bottom="item.marginBottom"-->
+			<!--							:padding-top="item.paddingTop"-->
+			<!--							:padding-bottom="item.paddingBottom"-->
+			<!--							:content="item.content"-->
 
-<!--			/>-->
+			<!--			/>-->
 		</div>
 
 
@@ -29,11 +29,12 @@ export default {
 		AppRow
 	},
 	async setup () {
-		const items = await useAsyncData(
+		const items = ref([])
+		const listComponents = await useAsyncData(
 			'mountains',
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
-		console.log(items)
+		items.value = listComponents.data
 		return {
 			items
 		}
