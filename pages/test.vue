@@ -15,8 +15,8 @@
 	</div>
 </template>
 
-<script setup>
-import { AppRow } from '#components'
+<script>
+
 
 
 const { data, pending, error, refresh } = await useAsyncData(
