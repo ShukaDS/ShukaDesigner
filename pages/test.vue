@@ -36,7 +36,7 @@ export default {
 			() => $fetch('https://haton.ru/custom/t1/captions.json')
 		)
 
-		
+
 
 		items.value = listComponents.data
 		return {
