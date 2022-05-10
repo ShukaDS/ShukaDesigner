@@ -1,10 +1,8 @@
 <template>
-	<div class="container mx-auto grid grid-cols-6 gap-x-5" v-if="mediaType==='xs'">
-		<template>
+	<div v-if="isActive('xs', '7B')" class="container mx-auto grid grid-cols-6 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div class="col-span-6">
-				<template images>
-					<BaseContentDefault></BaseContentDefault>
-				</template>
+				<BaseContentDefault></BaseContentDefault>
 			</div>
 			<div class="col-span-6 grid grid-cols-6 gap-x-5 mt-2 mb-5">
 				<div class="col-span-4 col-start-2 text-center text-sm text-gray-500">
@@ -13,12 +11,10 @@
 			</div>
 		</template>
 	</div>
-	<div class="container mx-auto grid grid-cols-12 gap-x-5" v-if="mediaType==='s'">
-		<template>
+	<div v-if="isActive('s', '7B')" class="container mx-auto grid grid-cols-12 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div class="col-span-4">
-				<template images>
-					<BaseContentDefault></BaseContentDefault>
-				</template>
+				<BaseContentDefault></BaseContentDefault>
 			</div>
 		</template>
 		<div class="col-span-12 grid grid-cols-12 gap-x-5 mt-2">
@@ -29,8 +25,8 @@
 			</template>
 		</div>
 	</div>
-	<div class="container mx-auto grid grid-cols-12 gap-x-5" v-if="['xl', 'l', 'm'].includes(mediaType)">
-		<template>
+	<div v-if="isActive(['xl', 'l', 'm'], '7B')" class="container mx-auto grid grid-cols-12 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div class="col-span-4">
 				<template images>
 					<BaseContentDefault></BaseContentDefault>
@@ -39,7 +35,7 @@
 		</template>
 
 		<div class="col-span-12 grid grid-cols-12 gap-x-5 mt-2">
-			<template texts>
+			<template v-for="(item, key) in items">
 				<div class="col-span-4 text-sm text-gray-500 text-center">
 					<BaseContentCaption></BaseContentCaption>
 				</div>

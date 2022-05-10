@@ -1,6 +1,6 @@
 <template>
-	<div class="container mx-auto grid grid-cols-6 gap-x-5" v-if="mediaType==='xs'">
-		<template images>
+	<div v-if="isActive('xs', '7C')" class="container mx-auto grid grid-cols-6 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div class="col-span-6 mb-5">
 				<BaseContentDefault></BaseContentDefault>
 			</div>
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container mx-auto grid grid-cols-12 gap-x-5" v-if="['s','m','xl', 'l'].includes(mediaType)">
+	<div v-if="isActive(['s','m','xl', 'l'], '7C')" class="container mx-auto grid grid-cols-12 gap-x-5">
 		<template>
 			<div class="col-span-4">
 				<BaseContentDefault></BaseContentDefault>

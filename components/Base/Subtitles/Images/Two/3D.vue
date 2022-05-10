@@ -1,12 +1,7 @@
 <template>
-	<div class="w-full" v-if="mediaType==='xs'">
-		<template image1>
-			<div class="w-full mb-5">
-				<BaseContentDefault></BaseContentDefault>
-			</div>
-		</template>
-		<template image1>
-			<div class="w-full">
+	<div v-if="isActive('xs', '3D')" class="w-full grid -mt-5">
+		<template v-for="(item, key) in items">
+			<div class="w-full mt-5">
 				<BaseContentDefault></BaseContentDefault>
 			</div>
 		</template>
@@ -16,27 +11,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid grid-cols-2 gap-x-5" v-if="mediaType===['s','m'].includes(mediaType)">
-		<template images>
+	<div v-if="isActive(['s','m','l', 'xl'], '3D')" class="grid grid-cols-2 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div>
 				<BaseContentDefault></BaseContentDefault>
 			</div>
 		</template>
 		<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
-			<div class="col-span-4 col-start-5 text-sm text-gray-500 text-center">
-				<BaseContentCaption></BaseContentCaption>
-			</div>
-		</div>
-	</div>
-	<div class="w-full" v-if="['xl', 'l'].includes(mediaType)">
-		<div class="w-full">
-			<div class="grid grid-cols-2 gap-x-5">
-				<template images>
-					<BaseContentDefault></BaseContentDefault>
-				</template>
-			</div>
-		</div>
-		<div class="container mx-auto grid grid-cols-12 gap-x-5 mt-2">
 			<div class="col-span-4 col-start-5 text-sm text-gray-500 text-center">
 				<BaseContentCaption></BaseContentCaption>
 			</div>
