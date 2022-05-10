@@ -4,12 +4,13 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
+    "generate": "nuxi generate",
     "allupdate": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "autoprefixer": "10.4.0",
-    "nuxt3": "3.0.0-27296423.f3082ca",
+    "nuxt": "^3.0.0-rc.2",
     "postcss": "8.4.1",
     "sass": "1.43.5",
     "sass-loader": "12.3.0",
@@ -19,12 +20,12 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.1",
-    "@heroicons/vue": "1.0.5",
-    "@pinia/nuxt": "0.1.5",
-    "@tailwindcss/aspect-ratio": "0.3.0",
-    "@tailwindcss/forms": "0.4.0-alpha.1",
-    "@tailwindcss/line-clamp": "0.2.2",
-    "@tailwindcss/typography": "0.5.0-alpha.2",
-    "pinia": "2.0.4"
+    "@heroicons/vue": "1.0.6",
+    "@pinia/nuxt": "0.1.9",
+    "@tailwindcss/aspect-ratio": "0.4.0",
+    "@tailwindcss/forms": "0.5.1",
+    "@tailwindcss/line-clamp": "0.4.0",
+    "@tailwindcss/typography": "0.5.2",
+    "pinia": "2.0.14"
   }
 }
