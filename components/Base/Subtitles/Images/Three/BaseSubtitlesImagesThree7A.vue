@@ -85,22 +85,6 @@
 				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</template>
-		<template v-for="(item, key) in items">
-			<div class="col-span-4 col-start-5">
-				<BaseContentDefault></BaseContentDefault>
-			</div>
-			<div class="col-span-4 col-start-5 text-sm text-gray-500 mt-2 mb-5">
-				<BaseContentCaption></BaseContentCaption>
-			</div>
-		</template>
-		<template v-for="(item, key) in items">
-			<div class="col-span-4 col-start-5">
-				<BaseContentDefault></BaseContentDefault>
-			</div>
-			<div class="col-span-4 col-start-5 text-sm text-gray-500 mt-2">
-				<BaseContentCaption></BaseContentCaption>
-			</div>
-		</template>
 	</div>
 	<!--7F-->
 	<div v-if="isActive('xs', '7F')"

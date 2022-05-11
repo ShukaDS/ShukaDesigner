@@ -1,5 +1,5 @@
 <template>
-	<div v-if="isActive('xs', '7B')" class="container mx-auto grid grid-cols-6 gap-x-5">
+	<div v-if="isActive('xs', '7B')" class="container mx-auto grid grid-cols-6 gap-x-5 -mb-5">
 		<template v-for="(item, key) in items">
 			<div class="col-span-6">
 				<BaseContentDefault></BaseContentDefault>
@@ -18,22 +18,19 @@
 			</div>
 		</template>
 		<div class="col-span-12 grid grid-cols-12 gap-x-5 mt-2">
-			<template texts>
+			<template v-for="(item, key) in items">
 				<div class="col-span-4 text-sm text-gray-500 text-center">
 					<BaseContentCaption></BaseContentCaption>
 				</div>
 			</template>
 		</div>
 	</div>
-	<div v-if="isActive(['xl', 'l', 'm'], '7B')" class="container mx-auto grid grid-cols-12 gap-x-5">
+	<div v-if="isActive('m', '7B') || isActive('l', '7B') || isActive('xl', '7B')" class="container mx-auto grid grid-cols-12 gap-x-5">
 		<template v-for="(item, key) in items">
 			<div class="col-span-4">
-				<template images>
-					<BaseContentDefault></BaseContentDefault>
-				</template>
+				<BaseContentDefault></BaseContentDefault>
 			</div>
 		</template>
-
 		<div class="col-span-12 grid grid-cols-12 gap-x-5 mt-2">
 			<template v-for="(item, key) in items">
 				<div class="col-span-4 text-sm text-gray-500 text-center">

@@ -11,8 +11,8 @@
 			</div>
 		</div>
 	</div>
-	<div v-if="isActive(['s','m','xl', 'l'], '7C')" class="container mx-auto grid grid-cols-12 gap-x-5">
-		<template>
+	<div v-if="isActive('s', '7C') || isActive('m', '7C') || isActive('l', '7C') || isActive('xl', '7C')" class="container mx-auto grid grid-cols-12 gap-x-5">
+		<template v-for="(item, key) in items">
 			<div class="col-span-4">
 				<BaseContentDefault></BaseContentDefault>
 			</div>
