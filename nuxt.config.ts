@@ -68,6 +68,9 @@ if (process.env.NODE_ENV === 'production') {
         // },
 
         // dev: true,
+        modules: [
+            '@vueuse/nuxt',
+        ],
 
         app: {
             head: {

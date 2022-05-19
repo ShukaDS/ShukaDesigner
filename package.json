@@ -9,12 +9,14 @@
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@vueuse/core": "^8.5.0",
+    "@vueuse/nuxt": "^8.5.0",
     "autoprefixer": "10.4.0",
     "nuxt": "^3.0.0-rc.2",
     "postcss": "8.4.1",
     "sass": "1.43.5",
     "sass-loader": "12.3.0",
-    "tailwindcss": "3.0.0-alpha.1",
+    "tailwindcss": "3.0.24",
     "vite-ssg": "^0.20.0",
     "vue-router": "^4.0.15"
   },
