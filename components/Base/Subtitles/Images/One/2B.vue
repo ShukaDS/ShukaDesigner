@@ -1,53 +1,29 @@
 <template>
-	<div class="w-full" v-if="mediaType==='xs'">
+	<div v-if="isActive('xs', '2B')" class="w-full">
 		<div class="w-full">
 			<div class="w-2/3"><!--просчитать-->
-				<img class="w-full"
-						 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
+				<BaseContentDefault></BaseContentDefault>
 			</div>
 		</div>
 		<div class="container mx-auto grid grid-cols-6 gap-x-5 mt-2">
-			<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<div class="col-span-4 text-sm text-gray-500">
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
-	<div class="grid grid-cols-2 gap-x-5" v-if="mediaType==='s'">
-		<div class="w-full">
+	<div v-if="isActive('s', '2B') || isActive('m', '2B') || isActive('l', '2B') || isActive('xl', '2B')" class="grid grid-cols-2 gap-x-5">
+		<template>
 			<div class="w-full">
-				<img class="w-full"
-						 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
+				<div class="w-full">
+					<BaseContentDefault></BaseContentDefault>
+				</div>
 			</div>
-		</div>
-		<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
-			<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+			<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
+				<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
+					<BaseContentCaption></BaseContentCaption>
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="grid grid-cols-2 gap-x-5" v-if="mediaType==='m'">
-		<div>
-			<img class="w-full"
-					 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
-		</div>
-		<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
-			<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
-			</div>
-		</div>
-	</div>
-	<div class="grid grid-cols-2 gap-x-5" v-if="['xl', 'l'].includes(mediaType)">
-		<div class="w-full">
-			<div class="w-full">
-				<img class="w-full"
-						 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
-			</div>
-		</div>
-		<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
-			<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
-			</div>
-		</div>
+		</template>
 	</div>
 </template>
 

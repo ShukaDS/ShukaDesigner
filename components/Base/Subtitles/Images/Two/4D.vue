@@ -1,20 +1,25 @@
 <template>
-	<div class="w-full" v-if="mediaType==='xs'">
-		<div class="w-full">
+	<div v-if="isActive('xs', '4D')" class="w-full">
+		<template v-for="(item, key) in items">
 			<div class="w-full">
-				<img class="w-full"
-						 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
+				<BaseContentDefault></BaseContentDefault>
 			</div>
-		</div>
-		<div class="w-full">
-			<div class="w-full">
-				<img class="w-full"
-						 src="https://img03.rl0.ru/afisha/e1500x600i/daily.afisha.ru/uploads/images/7/a3/7a3d63af783f417c93499a559275817d.jpg">
-			</div>
-		</div>
+		</template>
 		<div class="container mx-auto grid grid-cols-6 gap-x-5 mt-2">
 			<div class="col-span-4 col-start-2 text-sm text-gray-500 text-center">
-				Tadanori Yokoo exhibition poster at MoMA, 1972 by Japanese artist Tadanori Yokoo
+				<BaseContentCaption></BaseContentCaption>
+			</div>
+		</div>
+	</div>
+	<div v-if="isActive('s', '4D') || isActive('m', '4D') || isActive('l', '4D') || isActive('xl', '4D')" class="grid grid-cols-2">
+		<template v-for="(item, key) in items">
+			<div>
+				<BaseContentDefault></BaseContentDefault>
+			</div>
+		</template>
+		<div class="col-span-2 container mx-auto grid grid-cols-12 gap-x-5 mt-2">
+			<div class="col-span-4 col-start-5 text-sm text-gray-500 text-center">
+				<BaseContentCaption></BaseContentCaption>
 			</div>
 		</div>
 	</div>
