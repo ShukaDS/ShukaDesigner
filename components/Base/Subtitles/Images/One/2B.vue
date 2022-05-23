@@ -11,7 +11,8 @@
 			</div>
 		</div>
 	</div>
-	<div v-if="isActive('s', '2B') || isActive('m', '2B') || isActive('l', '2B') || isActive('xl', '2B')" class="grid grid-cols-2 gap-x-5">
+	<div v-if="isActive('s', '2B') || isActive('m', '2B') || isActive('l', '2B') || isActive('xl', '2B')"
+			 class="grid grid-cols-2 gap-x-5">
 		<template>
 			<div class="w-full">
 				<div class="w-full">

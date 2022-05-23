@@ -5,8 +5,8 @@
 		<div class="container mx-auto">
 
 			<!--			<pre class="text-green-800">{{ globalTypeNowL }}</pre>-->
-<!--			<pre>{{ selectedGlobalTypes }}</pre>-->
-<!--			<pre>{{ state.item }}</pre>-->
+			<!--			<pre>{{ selectedGlobalTypes }}</pre>-->
+			<!--			<pre>{{ state.item }}</pre>-->
 			<!--			<pre>{{ globalTypes }}</pre>-->
 			<!--			<pre>{{ state.item }}</pre>-->
 
@@ -267,19 +267,15 @@ export default {
 		})
 		const selectedStep = ref(steps[0])
 		const selectedType = ref(null)
-
 		const selectedGlobalTypes = ref(null)
-
 		onMounted(async () => {
 			console.log(123)
 			const response = await fetch('https://z.shuka.design/api/types')
 			globalTypes.value = await response.json()
-			selectedGlobalTypes.value  = globalTypes.value[0]
-
+			selectedGlobalTypes.value = globalTypes.value[0]
 			console.log(response)
 			// state.globalTypes = await response.json();
 		})
-
 		const globalTypeNow = computed(() => {
 			const result = globalTypes.value.filter(word => word.key === selectedGlobalTypes.value['key'])
 			if (result.length > 0) {
@@ -326,7 +322,6 @@ export default {
 		// 	/^.*\.jpg$/
 		// )
 		// console.log(illustrations.keys())
-
 		return {
 			state,
 			windowWidth, mediaType,
@@ -340,7 +335,7 @@ export default {
 			globalTypeNowXS,
 			selectedGlobalTypes,
 			// steps
-			steps,
+			steps
 		}
 	},
 	props: {

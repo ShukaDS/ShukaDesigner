@@ -11,7 +11,8 @@
 			</div>
 		</div>
 	</div>
-	<div v-if="isActive('s', '4D') || isActive('m', '4D') || isActive('l', '4D') || isActive('xl', '4D')" class="grid grid-cols-2">
+	<div v-if="isActive('s', '4D') || isActive('m', '4D') || isActive('l', '4D') || isActive('xl', '4D')"
+			 class="grid grid-cols-2">
 		<template v-for="(item, key) in items">
 			<div>
 				<BaseContentDefault></BaseContentDefault>

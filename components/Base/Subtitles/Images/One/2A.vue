@@ -11,7 +11,8 @@
 			</div>
 		</div>
 	</div>
-	<div v-if="isActive('s', '1B') || isActive('m', '1B') || isActive('l', '1B') || isActive('xl', '1B')" class="grid grid-cols-2 gap-x-5">
+	<div v-if="isActive('s', '1B') || isActive('m', '1B') || isActive('l', '1B') || isActive('xl', '1B')"
+			 class="grid grid-cols-2 gap-x-5">
 		<template>
 			<div class="w-full">
 				<div class="w-full">
@@ -29,15 +30,15 @@
 
 <script>
 import useGlobalMedia from '../../../../../composables/useGlobalMedia'
-import BaseImagesTwo from "../../../Images/Two/BaseImagesTwo";
+import BaseImagesTwo from '../../../Images/Two/BaseImagesTwo'
 
 export default {
 	name: '2A',
-	components: {BaseImagesTwo},
+	components: { BaseImagesTwo },
 	layout: false,
 	setup () {
 		const { windowWidth, mediaType } = useGlobalMedia()
 		return { windowWidth, mediaType }
-	},
+	}
 }
 </script>

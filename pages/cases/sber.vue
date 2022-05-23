@@ -1,49 +1,49 @@
 <template>
 	<div>
 
-		<!--		<pre>{{ items }}</pre>-->
+<!--		<pre>{{ items }}</pre>-->
 
-		<!--
 		<div v-for="item in items" class="w-full relative grid grid-rows-1">
 
-			<template v-if="item.editingOnly">
-				<BuilderRow type="edit"></BuilderRow>
-			</template>
-
-			<BaseRow
-							v-else
-							:background-color="item.backgroundColor"
-							:margin-top="item.marginTop"
-							:margin-bottom="item.marginBottom"
-							:padding-top="item.paddingTop"
-							:padding-bottom="item.paddingBottom"
-							:content="item.content"
-
-			></BaseRow>
+			<BaseRowqwe
+							:background-color="item.bg"
+							:margin-top="item.mt"
+							:margin-bottom="item.mb"
+							:padding-top="item.pt"
+							:padding-bottom="item.pb"
+							:content="item.contents"
+							:data="item.data"
+			></BaseRowqwe>
 
 		</div>
-		-->
 
-		<BuilderRow type="create" :item="items[0]"></BuilderRow>
+		<!--		<BuilderRow type="create" :item="items[0]"></BuilderRow>-->
 
 	</div>
 </template>
 
 <script>
-import Temp from '../../temp'
+import { ref } from 'vue'
+import { useFetch } from '@vueuse/core'
+
 export default {
-	components: { Temp },
-	setup () {
+	components: {},
+	async setup () {
 		const items = ref([])
-		const { data, pending, error, refresh } = useFetch(
-			'https://z.shuka.design/cases-data/caseSber.json'
-		)
+
+		const response = await fetch('https://z.shuka.design/api/work/1')
+		const data = await response.json()
 		console.log(data)
-		for (let i in data.value) {
-			//Object.assign({}, obj);
-			console.log(data.value[i], i)
-			items.value.push(Object.assign({ backgroundColor: '#ffffff' }, data.value[i]))
-		}
+
+		items.value = data.items
+		// console.log(data.value.items)
+		// items.value = data.value.items
+		// console.log(data)
+		// for (let i in data.value) {
+		// 	console.log(data.value[i], i)
+		// 	items.value.push(data.value[i])
+		// }
+		console.log(items)
 		return {
 			items
 		}

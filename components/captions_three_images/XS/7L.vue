@@ -1,0 +1,25 @@
+<template>
+	<div class="container mx-auto grid grid-flow-col gap-x-5  overflow-y-auto">
+		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
+			<template v-for="(item, key) in items.slice(0, 3)">
+				<div class="col-span-6">
+					<BaseContentDefault :content="item"></BaseContentDefault>
+				</div>
+				<div class="col-span-4 text-sm mt-2 text-gray-500">
+					<BaseContentCaption :content="captions[key]"></BaseContentCaption>
+				</div>
+			</template>
+		</div>
+	</div>
+</template>
+
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+	props: {
+		items: Object,
+		captions: Object
+	}
+})
+</script>

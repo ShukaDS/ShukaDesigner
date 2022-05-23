@@ -1,5 +1,5 @@
 <template>
-	<div v-if="isActive('xs', '3A')" class="w-full -mb-5" >
+	<div v-if="isActive('xs', '3A')" class="w-full -mb-5">
 		<template v-for="(item, key) in items">
 			<BaseContentDefault></BaseContentDefault>
 			<div class="container mx-auto grid grid-cols-6 gap-x-5 mt-2 mb-5">
@@ -9,7 +9,8 @@
 			</div>
 		</template>
 	</div>
-	<div v-if="isActive('s', '3A') || isActive('m', 'default') || isActive('l', 'default') || isActive('xl', 'default')"  class="grid grid-cols-2 gap-x-5" >
+	<div v-if="isActive('s', '3A') || isActive('m', 'default') || isActive('l', 'default') || isActive('xl', 'default')"
+			 class="grid grid-cols-2 gap-x-5">
 		<template v-for="(item, key) in items">
 			<BaseContentDefault></BaseContentDefault>
 		</template>
@@ -21,16 +22,16 @@
 					</div>
 				</div>
 			</template>
-<!--			<template text1>-->
-<!--				<div class="col-span-4 text-sm text-gray-500">-->
-<!--					<BaseContentCaption></BaseContentCaption>-->
-<!--				</div>-->
-<!--			</template>-->
-<!--			<template text2>-->
-<!--				<div class="col-span-4 col-start-7 text-sm text-gray-500">-->
-<!--					<BaseContentCaption></BaseContentCaption>-->
-<!--				</div>-->
-<!--			</template>-->
+			<!--			<template text1>-->
+			<!--				<div class="col-span-4 text-sm text-gray-500">-->
+			<!--					<BaseContentCaption></BaseContentCaption>-->
+			<!--				</div>-->
+			<!--			</template>-->
+			<!--			<template text2>-->
+			<!--				<div class="col-span-4 col-start-7 text-sm text-gray-500">-->
+			<!--					<BaseContentCaption></BaseContentCaption>-->
+			<!--				</div>-->
+			<!--			</template>-->
 		</div>
 	</div>
 

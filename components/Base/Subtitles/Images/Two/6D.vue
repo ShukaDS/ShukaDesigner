@@ -13,7 +13,8 @@
 	</div>
 
 
-	<div v-if="isActive('s', '6D') || isActive('m', '6D') || isActive('l', '6D') || isActive('xl', '6D')" class="container mx-auto grid grid-cols-2">
+	<div v-if="isActive('s', '6D') || isActive('m', '6D') || isActive('l', '6D') || isActive('xl', '6D')"
+			 class="container mx-auto grid grid-cols-2">
 		<template v-for="(item, key) in items">
 			<div>
 				<BaseContentDefault></BaseContentDefault>
