@@ -2,7 +2,7 @@
 	<div class="container mx-auto grid grid-cols-6 gap-5">
 		<div class="col-span-5 col-start-2">
 			<div>
-				<p class="text-xl text-gray-500">
+				<p class="text-base text-gray-500">
 					<BaseContentCaption :content="captions[0]"></BaseContentCaption>
 				</p>
 			</div>
