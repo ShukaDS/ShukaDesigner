@@ -16,7 +16,7 @@
   <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/xTY0SlyVfCQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>-->
 
-	<div v-if="content.type === 'vimeo'" class="relative pb-[100%]">
+	<div v-if="content.type === 'vimeo'" class="relative" :style="{'padding-bottom': content.ratio + '%'}">
 		<iframe class="absolute top-0 left-0 w-full h-full" :src="content.link"
 						allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen
 						allowfullscreen></iframe>
