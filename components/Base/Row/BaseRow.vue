@@ -1,6 +1,6 @@
 <template>
 
-	<section :class="classesWrap">
+	<section :class="classesWrap" :data-com="currentComponent">
 
 		<keep-alive>
 			<component :is="currentComponent" :content="content"></component>
