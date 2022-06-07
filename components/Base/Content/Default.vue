@@ -8,8 +8,8 @@
       </div>-->
 
 	<div v-if="content.type === 'image'" class="w-full">
-<!--		<img :src="content.link" class="w-full" alt="">-->
-		<img src="https://mainold.website.yandexcloud.net/media/armageddon/newFormat/12.webp" class="w-full" alt="">
+		<img :src="content.link" class="w-full" alt="">
+<!--		<img src="https://mainold.website.yandexcloud.net/media/armageddon/newFormat/12.webp" class="w-full" alt="">-->
 	</div>
 
 	<!--<div class="relative pb-[100%]">
