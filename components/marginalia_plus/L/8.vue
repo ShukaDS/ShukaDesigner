@@ -9,7 +9,7 @@
 			</p>
 		</div>
 		<div class="col-span-6 col-start-7">
-			<div class="text-xl text-gray-500 grid gap-v20">
+			<div class="text-l text-gray-500 grid gap-v20">
 				<BaseContentCaption :content="captions[1]"></BaseContentCaption>
 			</div>
 		</div>
