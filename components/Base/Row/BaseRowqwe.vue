@@ -1,6 +1,6 @@
 <template>
 
-	<section :class="classesWrap" :style="styleWrap">
+	<section :class="classesWrap" :style="styleWrap" :data-com="currentComponent">
 
 <!--				<pre>{{ mediaType }}</pre>-->
 		<!--		<pre class="text-orange-500">2{{ data }}</pre>-->
