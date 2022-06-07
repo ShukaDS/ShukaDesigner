@@ -6,6 +6,7 @@
 			</div>
 			<p class="text-gray-500 text-sm">
 				<BaseContentCaption :content="captions[0]"></BaseContentCaption>
+			</p>
 		</div>
 		<div class="" style="width: 908px;">
 			<BaseContentDefault :content="items[1]"></BaseContentDefault>
