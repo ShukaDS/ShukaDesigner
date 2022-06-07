@@ -2,10 +2,10 @@
 
 	<section :class="classesWrap" :style="styleWrap">
 
-				<pre>{{ mediaType }}</pre>
+<!--				<pre>{{ mediaType }}</pre>-->
 		<!--		<pre class="text-orange-500">2{{ data }}</pre>-->
 		<!--		<pre class="text-orange-500">2{{ data[mediaType] }}</pre>-->
-				<pre class="text-red-500">{{ currentComponent }}</pre>
+<!--				<pre class="text-red-500">{{ currentComponent }}</pre>-->
 		<!--		<pre class="text-green-600">4{{ content }}</pre>-->
 
 		<component :is="currentComponent" :items="content.items" :captions="content.captions"></component>

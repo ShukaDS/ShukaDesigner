@@ -1,3 +1,40 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+
+@font-face {
+	font-family: "Gerbera-Shuka";
+	src: url("fonts/Gerbera-Shuka-Bold.woff") format("woff"), url("fonts/Gerbera-Shuka-Bold.woff") format("ttf");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gerbera-Shuka";
+	src: url("fonts/Gerbera-Shuka-Medium.woff2") format("woff2"), url("fonts/Gerbera-Shuka-Medium.woff") format("woff"), url("fonts/Gerbera-Shuka-Medium.ttf") format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gerbera-Shuka";
+	src: url("fonts/Gerbera-Shuka-Light.woff2") format("woff2"), url("fonts/Gerbera-Shuka-Light.woff") format("woff"), url("fonts/Gerbera-Shuka-Light.ttf") format("ttf");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gertrude";
+	src: url("fonts/Gertrude-regular.woff2 ") format("woff2"), url("fonts/Gertrude-regular.woff ") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+.gerbera-shuka {
+	font-family: "Gerbera-Shuka", sans-serif;
+}
+
+.gertrude {
+	font-family: "Gertrude", sans-serif;
+}
