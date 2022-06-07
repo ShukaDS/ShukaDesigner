@@ -3,7 +3,7 @@
 		<div class="col-span-5">
 			<div>
 				<p class="text-base text-gray-500">
-					<BaseContentCaption :content="captions[0]"></BaseContentCaption>
+					{{ captions[0] }}
 				</p>
 			</div>
 		</div>
