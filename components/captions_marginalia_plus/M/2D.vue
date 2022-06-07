@@ -1,6 +1,6 @@
 <template>
 	<div class="container mx-auto grid grid-cols-12 gap-5">
-		<div class="col-span-2 container mx-autoflex flex-col">
+		<div class="col-span-2 mx-autoflex flex-col">
 			<p class="text-gray-500 text-sm">
 				<BaseContentCaption :content="captions[0]"></BaseContentCaption>
 			</p>
