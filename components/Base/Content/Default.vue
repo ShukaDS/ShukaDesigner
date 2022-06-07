@@ -29,8 +29,6 @@
 	<!--<div class="relative pb-[100%]">
 <iframe class="absolute top-0 left-0 w-full h-full" loading="lazy" title="1" src="https://player.vimeo.com/video/612734414?quality=1080p&amp;20badge=0&amp;autopause=0&amp;background=1&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
 </div>-->
-
-	<!--<img :src="image.src" :alt="image.alt" class="w-full">-->
 </template>
 
 <script>
