@@ -35,6 +35,9 @@ import { defineComponent } from 'vue'
 export default defineComponent({
 	props: {
 		content: Object
+	},
+	mounted () {
+		console.log('content', this.content)
 	}
 })
 </script>
