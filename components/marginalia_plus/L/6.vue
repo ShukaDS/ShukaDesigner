@@ -14,8 +14,6 @@
 	</div>
 </template>
 
-
-
 <script>
 import { defineComponent } from 'vue'
 
