@@ -23,7 +23,7 @@
 	</div>
 
 	<div v-if="content.type === 'video'">
-		<video :src="content.link" class="w-full" autoplay></video>
+		<video :src="content.link" class="w-full" controls></video>
 	</div>
 
 	<!--<div class="relative pb-[100%]">
