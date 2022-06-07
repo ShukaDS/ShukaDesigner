@@ -180,7 +180,7 @@ export default {
 	components: {},
 	async setup () {
 		const items = ref([])
-		const response = await fetch('https://z.shuka.design/api/work/12')
+		const response = await fetch('https://z.shuka.design/api/work/11')
 		const data = await response.json()
 		console.log(data)
 		items.value = data.items
