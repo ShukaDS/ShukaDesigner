@@ -176,6 +176,7 @@ import { ref } from 'vue'
 import { useFetch } from '@vueuse/core'
 import useGlobalMedia from '../../composables/useGlobalMedia'
 
+
 export default {
 	components: {},
 	async setup () {
@@ -187,7 +188,7 @@ export default {
 		console.log(items)
 		const { windowWidth, mediaType } = useGlobalMedia()
 		return {
-			items, windowWidth, mediaType
+			items, meta, windowWidth, mediaType
 		}
 	}
 }
