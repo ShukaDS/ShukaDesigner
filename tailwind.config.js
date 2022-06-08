@@ -44,6 +44,9 @@ module.exports = {
 				'v72': '72px',
 				'v96': '96px',
 				'v144': '144px',
+				'5625': '56.25%',
+				'110vw': '110vw',
+				'196vw': '196vw',
 			},
 			container: false
 		},

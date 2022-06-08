@@ -21,8 +21,8 @@
 		</g>
 	</svg>
 	<svg id="svg_cross_large" style="width: 0; height: 0; display: block;" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M37 1L1 37" stroke="white"/>
-		<path d="M0.999998 1L37 37" stroke="white"/>
+		<path d="M37 1L1 37" class="stroke-current"/>
+		<path d="M0.999998 1L37 37" class="stroke-current"/>
 	</svg>
 
 
