@@ -8,9 +8,9 @@
 				<BaseContentCaption :content="captions[0]"></BaseContentCaption>
 			</p>
 		</div>
-		<div class="col-span-6 col-start-7">
+		<div class="col-span-5 col-start-8">
 			<div class="text-l text-gray-500 grid gap-v20">
-				<BaseContentCaption :content="captions[1]"></BaseContentCaption>
+				{{ captions[1] }}
 			</div>
 		</div>
 	</div>
