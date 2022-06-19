@@ -46,13 +46,7 @@ if (process.env.NODE_ENV === 'production') {
             dirs: ['~/components']
         },
 
-        plugins: [
-            { src: `~plugins/vimeo-player` }
-        ],
         build: {
-            vendor: [
-                'vue-vimeo-player'
-            ],
             transpile: ['@heroicons/vue']
         },
 
