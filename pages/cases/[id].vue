@@ -36,8 +36,9 @@ export default {
 	async setup () {
 		const items = ref([])
 		const meta = ref([])
+		const route = useRoute()
 
-		const response = await fetch(`https://z.shuka.design/api/work/${$route.params.id}')
+		const response = await fetch(`https://z.shuka.design/api/work/${route.params.id}`)
 		const data = await response.json()
 		console.log(data)
 		items.value = data.items
