@@ -23,7 +23,9 @@
 												:autoplay="true"
 												:loop="true"
 												:controls="false"
-												:controls="false"
+												:options="{
+													
+												}"
 												video-id="577580073"
 												class="vimeo"
 												@ready="onReady"
