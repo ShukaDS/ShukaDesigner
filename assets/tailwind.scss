@@ -45,7 +45,8 @@
 	}
 
 	.vue3-player-video > * {
-		@apply rounded-none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
 	}
 }
 
