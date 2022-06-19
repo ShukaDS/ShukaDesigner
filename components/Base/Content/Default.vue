@@ -24,7 +24,7 @@
 												:loop="true"
 												:controls="false"
 												:options="{
-													quality: 
+													quality: '1080p'
 												}"
 												video-id="577580073"
 												class="vimeo"
