@@ -24,7 +24,7 @@
 												:loop="true"
 												:controls="false"
 												:options="{
-													
+													quality: 
 												}"
 												video-id="577580073"
 												class="vimeo"
