@@ -22,6 +22,8 @@
 			<vue-vimeo-player ref="player"
 												:autoplay="true"
 												:loop="true"
+												:controls="false"
+												:controls="false"
 												video-id="577580073"
 												class="vimeo"
 												@ready="onReady"
