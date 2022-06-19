@@ -49,6 +49,17 @@ export default defineComponent({
 	},
 	mounted () {
 		console.log('content', this.content)
+	},
+	methods: {
+		onReady() {
+			this.playerReady = true
+		},
+		play () {
+			this.$refs.player.play()
+		},
+		pause () {
+			this.$refs.player.pause()
+		}
 	}
 })
 </script>
