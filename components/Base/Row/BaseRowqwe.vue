@@ -1,6 +1,10 @@
 <template>
 
-	<section v-if="currentComponent !== 'default'" :class="classesWrap" :style="styleWrap" :data-com="currentComponent">
+	<section v-if="currentComponent !== 'default'"
+					 :data-label="label"
+					 :class="classesWrap"
+					 :style="styleWrap"
+					 :data-com="currentComponent">
 
 <!--				<pre>{{ mediaType }}</pre>-->
 		<!--		<pre class="text-orange-500">2{{ data }}</pre>-->
@@ -10,7 +14,6 @@
 
 		<component :is="currentComponent" :items="content.items" :captions="content.captions"></component>
 		<!--			<CaptionsTwoImagesXS4C :items="[1]" :captions="[1]"></CaptionsTwoImagesXS4C>-->
-
 	</section>
 
 </template>
@@ -30,6 +33,13 @@ export default {
 		},
 		content: {
 			type: Object
+		},
+		label: {
+			type: String,
+			required: false,
+			default: () => {
+				return 'default'
+			}
 		},
 		marginTop: {
 			type: String,
@@ -69,7 +79,8 @@ export default {
 			let self = this
 			let result
 			result = {
-				'w-full': true
+				'w-full': true,
+				'gerbera-shuka': true,
 				// 'hover:outline-black	': true
 			}
 			result = self.createMargin(result)

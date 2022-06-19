@@ -162,7 +162,7 @@
 							:margin-bottom="item.mb"
 							:padding-top="item.pt"
 							:padding-bottom="item.pb"
-							:content="item.contents"
+							:content="item.contents" :label="item.label"
 							:data="item.data"
 			></BaseRowqwe>
 
