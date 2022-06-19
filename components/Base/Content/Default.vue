@@ -49,10 +49,12 @@
 <script>
 import { defineComponent } from 'vue'
 import { vueVimeoPlayer } from 'vue-vimeo-player'
+import VuePlayerVideo from 'vue3-player-video'
 
 export default defineComponent({
 	components: {
 		vueVimeoPlayer,
+		VuePlayerVideo
 	},
 	props: {
 		content: Object
