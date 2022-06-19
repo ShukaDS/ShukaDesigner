@@ -22,6 +22,82 @@
 
 		</div>
 
+		<section class="mt-32 gerbera-shuka text-sm md:text-lg text-black">
+			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
+				<div class="mb-16 md:mt-0">
+					<div class="flex flex-col">
+						<div class="uppercase mb-4 font-bold">Sber</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Anastasia Butrym</div>
+							<div class="text-[#6e6e6e]">Design direction</div>
+						</div>
+					</div>
+					<div class="flex flex-col mt-16 md:mt-[74px]">
+						<div class="uppercase mb-4 font-bold">LANDOR &amp; FITCH</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Nicolas Zeus</div>
+							<div class="text-[#6e6e6e]">Design direction</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="flex flex-col">
+						<div class="uppercase mb-4 font-bold">SHUKA</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Vasin</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Velichko</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Vasin</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Velichko</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Vasin</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div>Ivan Velichko</div>
+							<div class="text-[#6e6e6e]">Creative direction</div>
+						</div>
+					</div>
+					<div class="flex flex-col mt-16 md:mt-[74px]">
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div class="uppercase">
+								<a href="#">Superdesigners</a>
+							</div>
+							<div class="text-[#6e6e6e]">
+								2D, 3D Illustrations &amp; Animation
+							</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div class="uppercase">
+								<a href="#">Superdesigners</a>
+							</div>
+							<div class="text-[#6e6e6e]">
+								2D, 3D Illustrations &amp; Animation
+							</div>
+						</div>
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
+							<div class="uppercase">
+								<a href="#">Superdesigners</a>
+							</div>
+							<div class="text-[#6e6e6e]">
+								2D, 3D Illustrations &amp; Animation
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 	</div>
 </template>
 
@@ -37,7 +113,6 @@ export default {
 		const items = ref([])
 		const meta = ref([])
 		const route = useRoute()
-
 		const response = await fetch(`https://z.shuka.design/api/work/${route.params.id}`)
 		const data = await response.json()
 		console.log(data)
