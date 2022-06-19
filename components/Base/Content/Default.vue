@@ -45,6 +45,7 @@
 			:autoplay="true"
 			:controls="false"
 			:loop="true"
+			theme="gradient"
 		></vue-player-video>
 
 	</div>
