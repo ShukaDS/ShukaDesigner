@@ -19,7 +19,13 @@
 	<div v-if="content.type === 'vimeo'" class="relative" :style="{'padding-bottom': content.ratio + '%'}">
 
 		<client-only>
-			<vue-vimeo-player ref="player" video-id="577580073" class="vimeo" @ready="onReady" />
+			<vue-vimeo-player ref="player"
+												:autoplay="true"
+												:autoplay="true"
+												video-id="577580073"
+												class="vimeo"
+												@ready="onReady"
+			/>
 		</client-only>
 
 <!--		<iframe class="absolute top-0 left-0 w-full h-full" :src="content.link"-->
