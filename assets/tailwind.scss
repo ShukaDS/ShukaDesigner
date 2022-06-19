@@ -44,8 +44,8 @@
 		@apply absolute top-0 left-0 w-full h-full;
 	}
 
-	.video iframe {
-		@apply absolute top-0 left-0 w-full h-full;
+	.vue3-player-video > * {
+		@apply rounded-none;
 	}
 }
 
