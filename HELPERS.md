@@ -6,6 +6,8 @@ npm run start
 npm run dev
 
 
+
+
 cd D:\projects\shuka.design\ShukaDesigner
 
 sudo sh -c "echo '123' >> temp.vue"
