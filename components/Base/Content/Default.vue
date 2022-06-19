@@ -39,6 +39,11 @@
 
 	<div v-if="content.type === 'video'">
 		<video :src="content.link" class="w-full" controls></video>
+
+		<vue-player-video
+			:src="content.link"
+		></vue-player-video>
+
 	</div>
 
 	<!--<div class="relative pb-[100%]">
