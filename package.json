@@ -29,6 +29,7 @@
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
     "pinia": "2.0.14",
-    "vue-vimeo-player": "^1.1.2"
+    "vue-vimeo-player": "^1.1.2",
+    "vue3-player-video": "^1.2.5"
   }
 }
