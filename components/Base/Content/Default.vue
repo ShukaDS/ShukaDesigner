@@ -43,6 +43,7 @@
 		<vue-player-video
 			:src="content.link"
 			:autoplay="true"
+			:loop="true"
 		></vue-player-video>
 
 	</div>
