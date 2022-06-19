@@ -21,7 +21,7 @@
 		<client-only>
 			<vue-vimeo-player ref="player"
 												:autoplay="true"
-												:autoplay="true"
+												:loop="true"
 												video-id="577580073"
 												class="vimeo"
 												@ready="onReady"
