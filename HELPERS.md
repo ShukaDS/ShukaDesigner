@@ -13,6 +13,8 @@ sudo sh -c "echo '123' >> temp.vue"
 git clone https://NaassonTeam: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@github.com/NaassonTeam/ShukaDesigner
 
 
+
+
 nvm use 16
 cd /var/www/ShukaDesigner/ &&
 git pull https://NaassonTeam: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@github.com/NaassonTeam/ShukaDesigner
