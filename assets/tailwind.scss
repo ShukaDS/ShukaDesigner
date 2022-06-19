@@ -45,7 +45,7 @@
 	}
 
 	.vue3-player-video > * {
-		@apply rounded-none;
+		@apply rounded-none !important;
 	}
 }
 
