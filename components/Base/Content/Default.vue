@@ -41,6 +41,9 @@ import { defineComponent } from 'vue'
 import { vueVimeoPlayer } from 'vue-vimeo-player'
 
 export default defineComponent({
+	components: {
+		vueVimeoPlayer,
+	},
 	props: {
 		content: Object
 	},
