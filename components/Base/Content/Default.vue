@@ -38,7 +38,7 @@
 	</div>
 
 	<div v-if="content.type === 'video'">
-		<video :src="content.link" class="w-full" controls></video>
+<!--		<video :src="content.link" class="w-full" controls></video>-->
 
 		<vue-player-video
 			:src="content.link"
