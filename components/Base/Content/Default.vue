@@ -26,7 +26,7 @@
 												:options="{
 													quality: '1080p'
 												}"
-												video-id="577580073"
+												:video-id="content.vimeo_id"
 												class="vimeo"
 												@ready="onReady"
 			/>
