@@ -24,6 +24,8 @@
 
 		<pre>{{credits}}</pre>
 
+
+		
 		<section class="mt-32 gerbera-shuka text-sm md:text-lg text-black">
 			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
 				<div class="mb-16 md:mt-0">
