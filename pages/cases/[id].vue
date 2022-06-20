@@ -119,4 +119,8 @@ export default {
 .gertrude {
     font-family: "Gertrude", sans-serif;
 }
+
+.md\:grid-cols-2 {
+		
+}
 </style>
