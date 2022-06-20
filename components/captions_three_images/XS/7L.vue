@@ -5,7 +5,7 @@
 					 class="absolute left-0 mr-5"
 					 :style="{
 			width: oneColumnWidthWithoutGap * 4 + 'px',
-			paddingLeft: index === 0 ? '30px' : '0px'
+			paddingLeft: index === 0 ? `${oneColumnWidth}px` : '0px'
 		}"
 			>
 				<div class="w-full">
@@ -25,7 +25,7 @@ import Flickity from 'flickity'
 import useGlobalMedia from '../../../composables/useGlobalMedia'
 
 const props = defineProps(['items', 'captions'])
-const { oneColumnWidthWithoutGap } = useGlobalMedia()
+const { oneColumnWidthWithoutGap, oneColumnWidth } = useGlobalMedia()
 const galleryRef = ref(null)
 onMounted(() => {
 	let el = galleryRef.value.querySelector(`.carousel`)
