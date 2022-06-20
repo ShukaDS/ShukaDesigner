@@ -12,7 +12,7 @@
 					<BaseContentDefault :content="item"></BaseContentDefault>
 				</div>
 				<div class="w-full text-sm mt-2 text-gray-500">
-					<BaseContentCaption :content="index + captions[key]"></BaseContentCaption>
+					<BaseContentCaption :content="key + '|' + index + captions[key]"></BaseContentCaption>
 				</div>
 			</div>
 		</div>
