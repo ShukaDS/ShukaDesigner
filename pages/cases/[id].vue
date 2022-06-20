@@ -28,6 +28,7 @@
 
 		<section class="mt-32 gerbera-shuka text-sm md:text-lg text-black">
 			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
+				<!--
 				<div class="mb-16 md:mt-0">
 					<div class="flex flex-col">
 						<div class="uppercase mb-4 font-bold">Sber</div>
@@ -44,11 +45,17 @@
 						</div>
 					</div>
 				</div>
+				-->
 				<div>
 					<div class="flex flex-col">
 						<div class="uppercase mb-4 font-bold">SHUKA</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Vasin</div>
+
+
+
+						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]"
+								 v-for="item in credits.inside"
+						>
+							<div>item</div>
 							<div class="text-[#6e6e6e]">Creative direction</div>
 						</div>
 						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
