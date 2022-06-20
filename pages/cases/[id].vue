@@ -52,8 +52,9 @@
 
 						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]"
 								 v-for="item in credits.inside"
+								 v-if="item.id"
 						>
-							<div>item.id</div>
+							<div>{{ item.id }}</div>
 							<div class="text-[#6e6e6e]">{{item.position}}</div>
 						</div>
 
