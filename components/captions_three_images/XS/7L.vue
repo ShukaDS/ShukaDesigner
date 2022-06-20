@@ -28,9 +28,7 @@ export default defineComponent({
 import { onMounted, ref } from 'vue'
 import Flickity from 'flickity'
 
-const props = useProps({
-
-})
+const props = defineProps(['items', 'captions'])
 
 const classesTag = ref(null)
 classesTag.value = {
