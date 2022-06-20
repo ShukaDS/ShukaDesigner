@@ -1,9 +1,12 @@
 <template>
 	<div class="container mx-auto grid grid-flow-col gap-x-5  overflow-y-auto" ref="galleryRef">
-		<div class="mb-5 grid grid-col-6 gap-x-5 carousel" :style="{
+		<div class="mb-5 grid grid-col-6 gap-x-5 carousel" ><!--просчитать-->
+			<div v-for="(item, key) in items.slice(0, 3)"
+					 class="absolute left-0 mr-5"
+					 :style="{
 			width: oneColumnWidthWithoutGap * 4
-		}"><!--просчитать-->
-			<div v-for="(item, key) in items.slice(0, 3)" class="absolute left-0 mr-5">
+		}"
+			>
 				<div class="col-span-6">
 					<BaseContentDefault :content="item"></BaseContentDefault>
 				</div>
@@ -18,14 +21,11 @@
 <script setup>
 import { defineProps, onMounted, ref } from 'vue'
 import Flickity from 'flickity'
+import useGlobalMedia from '../../../composables/useGlobalMedia'
 
 const props = defineProps(['items', 'captions'])
+const { oneColumnWidthWithoutGap } = useGlobalMedia()
 
-const classesTag = ref(null)
-classesTag.value = {
-	'px-3 py-0.5 border border-main-black hover:border-main transition-colors duration-75 hover:text-main text-20': true,
-	'absolute left-0 mr-1': true
-}
 const galleryRef = ref(null)
 onMounted(() => {
 	let el = galleryRef.value.querySelector(`.carousel`)
