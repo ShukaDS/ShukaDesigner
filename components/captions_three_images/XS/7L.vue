@@ -4,13 +4,13 @@
 			<div v-for="(item, key) in items.slice(0, 3)"
 					 class="absolute left-0 mr-5"
 					 :style="{
-			width: oneColumnWidthWithoutGap * 4
+			width: oneColumnWidthWithoutGap * 4 + 'px'
 		}"
 			>
-				<div class="col-span-6">
+				<div class="w-full">
 					<BaseContentDefault :content="item"></BaseContentDefault>
 				</div>
-				<div class="col-span-4 text-sm mt-2 text-gray-500">
+				<div class="w-full text-sm mt-2 text-gray-500">
 					<BaseContentCaption :content="captions[key]"></BaseContentCaption>
 				</div>
 			</div>
