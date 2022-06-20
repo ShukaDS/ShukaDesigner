@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto grid grid-flow-col gap-x-5  overflow-y-auto">
+	<div class="container mx-auto grid grid-flow-col gap-x-5  overflow-y-auto" ref="galleryRef">
 		<div class="w-96 mb-5 grid grid-col-6 gap-x-5"><!--просчитать-->
 			<template v-for="(item, key) in items.slice(0, 3)">
 				<div class="col-span-6">
@@ -24,9 +24,9 @@ classesTag.value = {
 	'px-3 py-0.5 border border-main-black hover:border-main transition-colors duration-75 hover:text-main text-20': true,
 	'absolute left-0 mr-1': true
 }
-const tagsRef = ref(null)
+const galleryRef = ref(null)
 onMounted(() => {
-	let el = tagsRef.value.querySelector(`.carousel`)
+	let el = galleryRef.value.querySelector(`.carousel`)
 	let fff = new Flickity(el, {
 		freeScroll: true,
 		contain: true,
