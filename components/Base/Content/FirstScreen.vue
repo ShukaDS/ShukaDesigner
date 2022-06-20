@@ -27,7 +27,7 @@
 		<path d="M0.999998 1L37 37" class="stroke-current"></path>
 	</svg>
 
-	<section v-if="mediaType === 'l' || mediaType === 'xl'" class="relative w-full">
+	<section v-if="mediaType === 'l' || mediaType === 'xl'" class="min-h-screen relative w-full">
 		<div class="w-full relative">
 
 			<img v-if="coverType === 'image'" class="w-full" :src="coverMedia" alt="">
@@ -81,7 +81,7 @@
 		</div>
 	</section>
 
-	<section v-if="mediaType === 'm'" class="relative w-full">
+	<section v-if="mediaType === 'm'" class="min-h-screen relative w-full">
 		<div class="w-full relative">
 
 			<img v-if="coverType === 'image'" class="w-full" :src="coverMedia" alt="">
@@ -134,7 +134,7 @@
 		</div>
 	</section>
 
-	<section v-if="mediaType === 's'" class="relative w-full">
+	<section v-if="mediaType === 's'" class="min-h-screen relative w-full">
 		<div class="w-full relative flex justify-center overflow-hidden">
 
 			<img v-if="coverType === 'image'" class="w-full shrink-0 max-w-none" :src="coverMedia" alt="">
@@ -183,7 +183,7 @@
 		</div>
 	</section>
 
-	<section v-if="mediaType === 'xs'" class="relative w-full">
+	<section v-if="mediaType === 'xs'" class="min-h-screen relative w-full">
 		<div class="w-full h-screen relative flex justify-center overflow-hidden">
 
 			<img v-if="coverType === 'image'" class="w-full h-full object-cover shrink-0 max-w-none" :src="coverMedia" alt="">
