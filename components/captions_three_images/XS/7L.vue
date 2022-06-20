@@ -1,10 +1,11 @@
 <template>
 	<div class="container mx-auto grid grid-flow-col gap-x-5 overflow-y-auto" ref="galleryRef">
-		<div class="mb-5 grid grid-col-6 gap-x-5 carousel" ><!--просчитать-->
-			<div v-for="(item, key) in items.slice(0, 3)"
+		<div class="mb-5 grid grid-col-6 gap-x-5 carousel"><!--просчитать-->
+			<div v-for="(item, key, index) in items.slice(0, 3)"
 					 class="absolute left-0 mr-5"
 					 :style="{
-			width: oneColumnWidthWithoutGap * 4 + 'px'
+			width: oneColumnWidthWithoutGap * 4 + 'px',
+			paddingLeft: index === 0 ? '30px' : '0px'
 		}"
 			>
 				<div class="w-full">
@@ -25,7 +26,6 @@ import useGlobalMedia from '../../../composables/useGlobalMedia'
 
 const props = defineProps(['items', 'captions'])
 const { oneColumnWidthWithoutGap } = useGlobalMedia()
-
 const galleryRef = ref(null)
 onMounted(() => {
 	let el = galleryRef.value.querySelector(`.carousel`)
@@ -34,7 +34,7 @@ onMounted(() => {
 		contain: true,
 		prevNextButtons: false,
 		pageDots: false,
-		cellAlign: 'left',
+		cellAlign: 'left'
 	})
 	console.log(fff)
 })
