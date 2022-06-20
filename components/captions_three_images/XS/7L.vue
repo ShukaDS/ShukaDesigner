@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto grid grid-flow-col gap-x-5 overflow-y-auto" ref="galleryRef">
+	<div class="mx-auto grid grid-flow-col gap-x-5 overflow-y-auto" ref="galleryRef">
 		<div class="mb-5 grid grid-col-6 gap-x-5 carousel"><!--просчитать-->
 			<div v-for="(item, key, index) in items.slice(0, 3)"
 					 class="absolute left-0 mr-5"
