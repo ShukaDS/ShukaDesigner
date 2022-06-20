@@ -4,7 +4,7 @@
 			<div v-for="(item, key) in items.slice(0, 3)"
 					 class="absolute left-0 mr-5"
 					 :style="{
-			width: ((oneColumnWidthWithoutGap * 4) + oneColumnWidth ) +  'px',
+			width: ((oneColumnWidthWithoutGap * 4) + oneColumnWidth + 30.5) +  'px',
 			paddingLeft: key === 0 ? `${oneColumnWidth}px` : '0px'
 		}"
 			>
