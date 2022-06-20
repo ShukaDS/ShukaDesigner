@@ -22,6 +22,8 @@
 
 		</div>
 
+		<pre>{{credits}}</pre>
+
 		<section class="mt-32 gerbera-shuka text-sm md:text-lg text-black">
 			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
 				<div class="mb-16 md:mt-0">
@@ -112,12 +114,14 @@ export default {
 	async setup () {
 		const items = ref([])
 		const meta = ref([])
+		const credits = ref(null)
 		const route = useRoute()
 		const response = await fetch(`https://z.shuka.design/api/work/${route.params.id}`)
 		const data = await response.json()
 		console.log(data)
 		items.value = data.items
 		meta.value = data.meta
+		credits.value = data.credits
 		console.log(items)
 		const { windowWidth, mediaType } = useGlobalMedia()
 		return {
