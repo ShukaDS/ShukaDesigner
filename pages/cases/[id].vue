@@ -51,7 +51,7 @@
 
 						<template v-for="item in credits.inside">
 							<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]" v-if="item.id !== null">
-								<div>{{ teamMembers[item.id] }}</div>
+								<a href="{{ teamMembers[item.id].link }}">{{ teamMembers[item.id].name }}</a>
 								<div class="text-[#6e6e6e]">{{item.position}}</div>
 							</div>
 						</template>
