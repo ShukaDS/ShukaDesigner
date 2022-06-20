@@ -50,34 +50,13 @@
 					<div class="flex flex-col">
 						<div class="uppercase mb-4 font-bold">SHUKA</div>
 
-
-
 						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]"
 								 v-for="item in credits.inside"
 						>
-							<div>item</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
+							<div>item.id</div>
+							<div class="text-[#6e6e6e]">{{item.position}}</div>
 						</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Velichko</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
-						</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Vasin</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
-						</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Velichko</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
-						</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Vasin</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
-						</div>
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
-							<div>Ivan Velichko</div>
-							<div class="text-[#6e6e6e]">Creative direction</div>
-						</div>
+
 					</div>
 					<div class="flex flex-col mt-16 md:mt-[74px]">
 						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]">
