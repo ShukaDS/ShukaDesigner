@@ -47,13 +47,14 @@
 					<div class="flex flex-col">
 						<div class="uppercase mb-4 font-bold">SHUKA</div>
 
-						<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]"
-								 v-for="item in credits.inside"
-								 v-if="item.id !== null"
-						>
-							<div>{{ item.id }}</div>
-							<div class="text-[#6e6e6e]">{{item.position}}</div>
-						</div>
+
+						<template v-for="item in credits.inside">
+							<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]" v-if="item.id !== null">
+								<div>{{ item.id }}</div>
+								<div class="text-[#6e6e6e]">{{item.position}}</div>
+							</div>
+						</template>
+
 
 					</div>
 					<div class="flex flex-col mt-16 md:mt-[74px]">
