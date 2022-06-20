@@ -42,6 +42,7 @@
 					</div>
 				</div>
 				-->
+				<div></div>
 				<div>
 					<div class="flex flex-col">
 						<div class="uppercase mb-4 font-bold">SHUKA</div>
