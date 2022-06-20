@@ -28,15 +28,16 @@ const props = defineProps(['items', 'captions'])
 const { oneColumnWidthWithoutGap, oneColumnWidth } = useGlobalMedia()
 const galleryRef = ref(null)
 onMounted(() => {
-	let el = galleryRef.value.querySelector(`.carousel`)
-	let fff = new Flickity(el, {
-		freeScroll: true,
-		contain: true,
-		prevNextButtons: false,
-		pageDots: false,
-		cellAlign: 'left'
-	})
-	console.log(fff)
+	if (typeof window !== 'undefined') {
+		let el = galleryRef.value.querySelector(`.carousel`)
+		let fff = new Flickity(el, {
+			freeScroll: true,
+			contain: true,
+			prevNextButtons: false,
+			pageDots: false,
+			cellAlign: 'left'
+		})
+	}
 })
 </script>
 <style>
