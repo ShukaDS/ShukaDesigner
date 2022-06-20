@@ -25,7 +25,7 @@
 		<pre>{{credits}}</pre>
 
 
-		
+
 		<section class="mt-32 gerbera-shuka text-sm md:text-lg text-black">
 			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
 				<div class="mb-16 md:mt-0">
@@ -127,7 +127,7 @@ export default {
 		console.log(items)
 		const { windowWidth, mediaType } = useGlobalMedia()
 		return {
-			items, meta, windowWidth, mediaType
+			items, meta, windowWidth, mediaType, credits
 		}
 	}
 }
