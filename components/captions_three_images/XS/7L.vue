@@ -28,6 +28,7 @@ const props = defineProps(['items', 'captions'])
 const { oneColumnWidthWithoutGap, oneColumnWidth } = useGlobalMedia()
 const galleryRef = ref(null)
 onMounted(() => {
+
 	if (typeof window !== 'undefined') {
 		let el = galleryRef.value.querySelector(`.carousel`)
 		let fff = new Flickity(el, {
