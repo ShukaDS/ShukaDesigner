@@ -1,18 +1,18 @@
 <template>
 	<div class="mx-auto grid grid-flow-col gap-x-5 overflow-y-auto" ref="galleryRef">
 		<div class="mb-5 grid grid-col-6 gap-x-5 carousel"><!--просчитать-->
-			<div v-for="(item, key, index) in items.slice(0, 3)"
+			<div v-for="(item, key) in items.slice(0, 3)"
 					 class="absolute left-0 mr-5"
 					 :style="{
 			width: oneColumnWidthWithoutGap * 4 + 'px',
-			paddingLeft: index === 0 ? `${oneColumnWidth}px` : '1px'
+			paddingLeft: key === 0 ? `${oneColumnWidth}px` : '1px'
 		}"
 			>
 				<div class="w-full">
 					<BaseContentDefault :content="item"></BaseContentDefault>
 				</div>
 				<div class="w-full text-sm mt-2 text-gray-500">
-					<BaseContentCaption :content="key + '|' + index + captions[key]"></BaseContentCaption>
+					<BaseContentCaption :content="captions[key]"></BaseContentCaption>
 				</div>
 			</div>
 		</div>
