@@ -51,7 +51,7 @@
 
 						<template v-for="item in credits.inside">
 							<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]" v-if="item.id !== null">
-								<div>{{ item.id }}</div>
+								<div>{{ teamMembers[item.id] }}</div>
 								<div class="text-[#6e6e6e]">{{item.position}}</div>
 							</div>
 						</template>
@@ -106,6 +106,7 @@ export default {
 		const items = ref([])
 		const meta = ref([])
 		const credits = ref(null)
+		const teamMembers = ref(null)
 		const route = useRoute()
 		const response = await fetch(`https://z.shuka.design/api/work/${route.params.id}`)
 		const data = await response.json()
@@ -113,10 +114,11 @@ export default {
 		items.value = data.items
 		meta.value = data.meta
 		credits.value = data.credits
+		teamMembers.value = data.teamMembers
 		console.log(items)
 		const { windowWidth, mediaType } = useGlobalMedia()
 		return {
-			items, meta, windowWidth, mediaType, credits
+			items, meta, windowWidth, mediaType, credits, teamMembers
 		}
 	}
 }
