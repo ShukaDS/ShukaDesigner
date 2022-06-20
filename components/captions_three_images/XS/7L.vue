@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, defineProps } from 'vue'
 import Flickity from 'flickity'
 
 export default defineComponent({
