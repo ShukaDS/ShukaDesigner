@@ -120,7 +120,10 @@ export default {
     font-family: "Gertrude", sans-serif;
 }
 
-.md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
+
 </style>
