@@ -5,7 +5,7 @@
 					 class="absolute left-0 mr-5"
 					 :style="{
 			width: ((oneColumnWidthWithoutGap * 4) + oneColumnWidth + 30.5) +  'px',
-			paddingLeft: key === 0 ? `${oneColumnWidth}px` : '0px'
+			paddingLeft: key === 0 ? `${oneColumnWidth + 30.5}px` : '0px'
 		}"
 			>
 				<div class="w-full">
