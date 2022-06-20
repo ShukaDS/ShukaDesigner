@@ -15,6 +15,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import Flickity from 'flickity'
 
 export default defineComponent({
 	props: {
