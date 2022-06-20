@@ -13,19 +13,8 @@
 	</div>
 </template>
 
-<script>
-import { defineComponent, defineProps } from 'vue'
-import Flickity from 'flickity'
-
-export default defineComponent({
-	props: {
-		items: Object,
-		captions: Object
-	}
-})
-</script>
 <script setup>
-import { onMounted, ref } from 'vue'
+import { defineProps, onMounted, ref } from 'vue'
 import Flickity from 'flickity'
 
 const props = defineProps(['items', 'captions'])
