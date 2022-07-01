@@ -60,7 +60,7 @@ export default {
 				case 'm' :
 				case 'l' :
 				case 'xl' :
-					r['col-span-6 col-start-7'] = true
+					r['col-span-5 col-start-8'] = true
 			}
 			return r
 		},
