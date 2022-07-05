@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="pb-24">
 
 		<FirstScreen
 						:cover-title="meta.cover_title"
@@ -22,7 +22,7 @@
 
 		</div>
 
-		<section class="mt-24 mb-24 gerbera-shuka text-sm md:text-lg text-black">
+		<section class="mt-24 gerbera-shuka text-sm md:text-lg text-black">
 			<div class="container mx-auto grid md:grid-cols-2 gap-x-5">
 
 				<!--
@@ -51,8 +51,9 @@
 
 						<template v-for="item in credits.inside">
 							<div class="grid grid-cols-2 gap-x-5 py-4 border-t border-t-[#949494]" v-if="item.id !== null">
-								<a v-if="teamMembers[item.id]" href="{{ teamMembers[item.id].link }}">{{ teamMembers[item.id].name }}</a>
-								<div class="text-[#6e6e6e]">{{item.position}}</div>
+								<a v-if="item.link" :href="item.link">{{ item.name }}</a>
+								<span v-else>{{ item.name }}</span>
+								<div class="text-[#6e6e6e]">{{ item.position }}</div>
 							</div>
 						</template>
 
