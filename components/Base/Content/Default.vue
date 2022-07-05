@@ -9,7 +9,7 @@
 
 	<div v-if="content.type === 'image'" class="w-full">
 		<img :src="content.link" class="w-full" alt="">
-<!--		<img src="https://mainold.website.yandexcloud.net/media/armageddon/newFormat/12.webp" class="w-full" alt="">-->
+		<!--		<img src="https://mainold.website.yandexcloud.net/media/armageddon/newFormat/12.webp" class="w-full" alt="">-->
 	</div>
 
 	<!--<div class="relative pb-[100%]">
@@ -19,12 +19,16 @@
 	<div v-if="content.type === 'vimeo'" class="relative" :style="{'padding-bottom': content.ratio + '%'}">
 
 		<client-only>
+
 			<vue-vimeo-player ref="player"
 												:autoplay="true"
-												:loop="true"
 												:controls="false"
 												:options="{
-													quality: '1080p'
+													quality: '1080p',
+													autopause: false,
+													autoplay: true,
+													loop: true,
+													controls: false,
 												}"
 												:video-id="content.vimeo_id"
 												class="vimeo"
@@ -32,27 +36,27 @@
 			/>
 		</client-only>
 
-<!--		<iframe class="absolute top-0 left-0 w-full h-full" :src="content.link"-->
-<!--						allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen-->
-<!--						allowfullscreen></iframe>-->
+		<!--		<iframe class="absolute top-0 left-0 w-full h-full" :src="content.link"-->
+		<!--						allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen-->
+		<!--						allowfullscreen></iframe>-->
 	</div>
 
 	<div v-if="content.type === 'video'">
-<!--		<video :src="content.link" class="w-full" controls></video>-->
+		<!--		<video :src="content.link" class="w-full" controls></video>-->
 
 		<vue-player-video
-			:src="content.link"
-			:autoplay="true"
-			:controls="false"
-			:loop="true"
-			theme="gradient"
+						:src="content.link"
+						:autoplay="true"
+						:controls="false"
+						:loop="true"
+						theme="gradient"
 		></vue-player-video>
 
 	</div>
 
 	<!--<div class="relative pb-[100%]">
-<iframe class="absolute top-0 left-0 w-full h-full" loading="lazy" title="1" src="https://player.vimeo.com/video/612734414?quality=1080p&amp;20badge=0&amp;autopause=0&amp;background=1&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
-</div>-->
+  <iframe class="absolute top-0 left-0 w-full h-full" loading="lazy" title="1" src="https://player.vimeo.com/video/612734414?quality=1080p&amp;20badge=0&amp;autopause=0&amp;background=1&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+  </div>-->
 </template>
 
 <script>
@@ -72,8 +76,20 @@ export default defineComponent({
 		console.log('content', this.content)
 	},
 	methods: {
-		onReady() {
+		onReady () {
+
+			let self = this
 			this.playerReady = true
+
+
+			setTimeout(()=>{
+				console.log('player', self.$refs.player)
+
+
+				self.$refs.player.play()
+			}, 5000)
+
+			// this.play()
 		},
 		play () {
 			this.$refs.player.play()
