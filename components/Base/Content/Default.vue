@@ -29,10 +29,12 @@
 													autoplay: true,
 													loop: true,
 													controls: false,
+													muted: true,
 												}"
 												:video-id="content.vimeo_id"
 												class="vimeo"
 												@ready="onReady"
+												@error="onError"
 			/>
 		</client-only>
 
@@ -76,20 +78,17 @@ export default defineComponent({
 		console.log('content', this.content)
 	},
 	methods: {
-		onReady () {
-
+		onReady (player) {
 			let self = this
 			this.playerReady = true
-
-
-			setTimeout(()=>{
-				console.log('player', self.$refs.player)
-
-
+			setTimeout(() => {
+				console.log('player', self.$refs.player, player)
 				self.$refs.player.play()
-			}, 5000)
-
-			// this.play()
+			}, 100)
+		},
+		onError (error, player) {
+			let self = this
+			console.log(error, player)
 		},
 		play () {
 			this.$refs.player.play()
